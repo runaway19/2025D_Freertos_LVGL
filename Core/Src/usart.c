@@ -138,6 +138,23 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+/*
+#include <stdio.h>
+
+int fputc(int ch, FILE *f)
+{
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xffff);
+  return ch;
+}
+
+int fgetc(FILE *f)
+{
+  uint8_t ch = 0;
+  HAL_UART_Receive(&huart1, &ch, 1, 0xffff);
+  return ch;
+}
+*/
+
 volatile uint8_t usart_dma_tx_over = 1; // 串口DMA发�?�完成标�?
 
 /**
@@ -242,4 +259,5 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
     usart_dma_tx_over = 1;
   }
 }
+
 /* USER CODE END 1 */

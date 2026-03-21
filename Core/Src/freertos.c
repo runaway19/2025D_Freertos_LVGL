@@ -31,6 +31,7 @@
 /* USER CODE BEGIN Includes */
 #include "usart.h"
 #include "gpio.h"
+#include "adc.h"
 #include "LCD.h"
 #include "touch.h"
 #include "lvgl.h"
@@ -41,7 +42,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+extern uint16_t adc_buffer[];
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -262,8 +263,15 @@ void key_change_mode(void const * argument)
   /* USER CODE BEGIN key_change_mode */
 	//按键切换工作模式
   /* Infinite loop */
+	char msg[64];
+
   for(;;)
   {
+		float current_val = adc_buffer[0] * 3.3 / 4096; 
+    
+    int len = sprintf(msg, "ADC: %.2f\r\n", current_val);
+    HAL_UART_Transmit(&huart1, (uint8_t*)msg, len, HAL_MAX_DELAY);
+		
     osDelay(20);
   }
   /* USER CODE END key_change_mode */
