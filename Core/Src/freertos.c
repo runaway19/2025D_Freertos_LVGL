@@ -2,7 +2,7 @@
 /*
  ******************************************************************************
  *    硬件接线
- *    LCD            F4开发板        
+ *    LCD            F4�?发板        
  * ----------------------------------------------------------------------------
  *    GND       ->      GND         
  *    VCC       ->      5V        
@@ -56,13 +56,14 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-osSemaphoreId SPI1_Send_OK; // 定义信号量，用于SPI1发送完成标志位
+osSemaphoreId SPI1_Send_OK; // 定义信号量，用于SPI1发完成标志位
 uint8_t CTP_INT_Flag;       // 触摸屏中断标志位
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId BlinkLED2Handle;
 osThreadId LVGL_TaskHandleHandle;
 osThreadId FT6336_ScanTaskHandle;
+osThreadId key_changemodeHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -73,6 +74,7 @@ void StartDefaultTask(void const * argument);
 void BlinkLED2_Task(void const * argument);
 void LVGL_TaskHandler_Task(void const * argument);
 void FT6336_Scan_Task(void const * argument);
+void key_change_mode(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -138,6 +140,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(FT6336_ScanTask, FT6336_Scan_Task, osPriorityAboveNormal, 0, 128);
   FT6336_ScanTaskHandle = osThreadCreate(osThread(FT6336_ScanTask), NULL);
 
+  /* definition and creation of key_changemode */
+  osThreadDef(key_changemode, key_change_mode, osPriorityIdle, 0, 128);
+  key_changemodeHandle = osThreadCreate(osThread(key_changemode), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -195,9 +201,9 @@ void LVGL_TaskHandler_Task(void const * argument)
 {
   /* USER CODE BEGIN LVGL_TaskHandler_Task */
   USART1_Printf("%d : Run LVGL_TaskHandler_Task\r\n", osKernelSysTick());
-  lv_init(); // LVGL初始化
+  lv_init(); // LVGL初始
   USART1_Printf("%d : lv_init() Finish\r\n", osKernelSysTick());
-  lv_port_disp_init(); // LVGL显示初始化
+  lv_port_disp_init(); // LVGL显示初始
   USART1_Printf("%d : lv_port_disp_init() Finish\r\n", osKernelSysTick());
   LCD_Switch_Dir(0); // 旋转屏幕方向
   USART1_Printf("%d : LCD_Switch_Dir(0) Finish\r\n", osKernelSysTick());
@@ -229,19 +235,38 @@ void LVGL_TaskHandler_Task(void const * argument)
 void FT6336_Scan_Task(void const * argument)
 {
   /* USER CODE BEGIN FT6336_Scan_Task */
-  lv_port_indev_init(); // LVGL输入设备初始化
+  lv_port_indev_init(); // LVGL输入设备初始
   USART1_Printf("%d : lv_port_indev_init() Finish\r\n", osKernelSysTick());
   /* Infinite loop */
   for (;;)
   {
     if (CTP_INT_Flag == 1)
     {
-      tp_dev.scan(); // 扫描触摸屏
+      tp_dev.scan(); // 扫描触摸
       CTP_INT_Flag = 0;
     }
     osDelay(10);
   }
   /* USER CODE END FT6336_Scan_Task */
+}
+
+/* USER CODE BEGIN Header_key_change_mode */
+/**
+* @brief Function implementing the key_changemode thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_key_change_mode */
+void key_change_mode(void const * argument)
+{
+  /* USER CODE BEGIN key_change_mode */
+	//按键切换工作模式
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(20);
+  }
+  /* USER CODE END key_change_mode */
 }
 
 /* Private application code --------------------------------------------------*/

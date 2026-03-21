@@ -2,7 +2,7 @@
 /*
  ******************************************************************************
  *    硬件接线
- *    LCD            F4开发板        
+ *    LCD            		F4    
  * ----------------------------------------------------------------------------
  *    GND       ->      GND         
  *    VCC       ->      5V        
@@ -23,6 +23,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "adc.h"
 #include "crc.h"
 #include "dma.h"
 #include "i2c.h"
@@ -40,6 +41,7 @@
 #include "lv_demos.h"
 #include "touch.h"
 #include "FT6336.h"
+#include "my_fun.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -110,9 +112,14 @@ int main(void)
   MX_TIM3_Init();
   MX_CRC_Init();
   MX_SPI1_Init();
+  MX_ADC1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim3); // 启动定时器和定时器中断1Hz
-  
+	
+  HAL_TIM_Base_Start_IT(&htim3); // 启动定时器和定时器中 1Hz
+  HAL_TIM_Base_Start_IT(&htim2);
+	HAL_ADC_Start(&hadc1);
+	
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
@@ -194,16 +201,21 @@ void SystemClock_Config(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
-
+    if (htim->Instance == TIM2)
+    {
+			
+    }
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM9) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-	if (htim->Instance == TIM3) // 定时器TIM3，中断时间1ms
-  {
-    //lv_tick_inc(1); // LVGL时基
-  }
+	
+		if (htim->Instance == TIM3) // 定时器TIM3，中断时 1ms
+		{
+				//lv_tick_inc(1); // LVGL时基
+		}
+		
   /* USER CODE END Callback 1 */
 }
 
