@@ -208,21 +208,21 @@ void SystemClock_Config(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
-    if (htim->Instance == TIM2)
-    {
-			int a = 1;
-			a++;
-    }
+	if (htim->Instance == TIM2)
+	{
+		int test = 1;
+		test++;
+	}
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM9) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
 	
-		if (htim->Instance == TIM3) // 定时器TIM3，中断时 1ms
-		{
-				//lv_tick_inc(1); // LVGL时基
-		}
+	if (htim->Instance == TIM3) // 定时器TIM3，中断时 1ms
+	{
+			//lv_tick_inc(1); // LVGL时基
+	}
 		
   /* USER CODE END Callback 1 */
 }

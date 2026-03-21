@@ -1,5 +1,26 @@
 #include "my_fun.h"
 
+//检测线是否是is_SFTP  返回1则是 返回0则不是
+uint8_t is_SFTP(void)
+{
+	uint8_t result = 0;
+	ctrl_tx_pin(GPIOE,TX_9_Pin,1);
+	
+	osDelay(5);
+	
+	if(read_gpio_level(GPIOC, RX_9_Pin))
+	{
+			result = 1;
+	}
+	else
+	{
+			result = 0;
+	}
+	ctrl_tx_pin(GPIOE, TX_9_Pin, 0);
+
+  return result;
+}
+
 /**
  * @brief  通用 GPIO 电平切换函数
  * @param  GPIOx: 端口 (如 GPIOA, GPIOC, GPIOE)

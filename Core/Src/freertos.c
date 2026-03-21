@@ -29,6 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "my_fun.h"
 #include "usart.h"
 #include "gpio.h"
 #include "adc.h"
@@ -263,15 +264,12 @@ void key_change_mode(void const * argument)
   /* USER CODE BEGIN key_change_mode */
 	//按键切换工作模式
   /* Infinite loop */
-	char msg[64];
+
 
   for(;;)
   {
-		float current_val = adc_buffer[0] * 3.3 / 4096; 
-    
-    int len = sprintf(msg, "ADC: %.2f\r\n", current_val);
-    HAL_UART_Transmit(&huart1, (uint8_t*)msg, len, HAL_MAX_DELAY);
-		
+		uint8_t type = is_SFTP();
+		USART1_Printf("%d\n", type);
     osDelay(20);
   }
   /* USER CODE END key_change_mode */
