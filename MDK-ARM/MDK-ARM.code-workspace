@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "lv_port_disp.h": "c",
+            "cmsis_os.h": "c",
+            "lcd.h": "c",
+            "ft6336.h": "c"
+        }
+    },
+    "extensions": {}
+}
