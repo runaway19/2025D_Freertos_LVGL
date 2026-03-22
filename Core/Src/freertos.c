@@ -269,7 +269,9 @@ void key_change_mode(void const * argument)
   for(;;)
   {
 		uint8_t type = is_SFTP();
-		USART1_Printf("%d\n", type);
+		USART1_Printf("GPIO:%d\n", read_gpio_level(GPIOC, RX_9_Pin));
+		 
+		USART1_Printf("is_SFTP:%d\n", type);
     osDelay(20);
   }
   /* USER CODE END key_change_mode */
