@@ -1,5 +1,49 @@
 #include "my_fun.h"
 
+//  TX 端
+GPIO_TypeDef* TX_PORTS[] = {GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE};
+uint16_t TX_PINS[] = {TX_1_Pin, TX_2_Pin, TX_3_Pin, TX_4_Pin, TX_5_Pin, TX_6_Pin, TX_7_Pin, TX_8_Pin};
+
+//  RX 端
+GPIO_TypeDef* RX_PORTS[] = {GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD}; 
+uint16_t RX_PINS[] = {RX_1_Pin, RX_2_Pin, RX_3_Pin, RX_4_Pin, RX_5_Pin, RX_6_Pin, RX_7_Pin, RX_8_Pin};
+
+/**
+ * @brief  检测 1-8 号线是否存在短路
+ * @return uint8_t: 0-正常, num-与那条短路
+ */
+uint16_t detect_short(void)
+{
+    // TX 引脚都拉低
+    for (int i = 0; i < 8; i++) 
+	  {
+        ctrl_tx_pin(TX_PORTS[i], TX_PINS[i], 0);
+    }
+    osDelay(5);
+
+    // 扫描
+    for (int i = 0; i < 8; i++) 
+    {
+        ctrl_tx_pin(TX_PORTS[i], TX_PINS[i], 1);
+        osDelay(10); 
+        // 读RX
+        for (int j = 0; j < 8; j++) 
+        {
+            if (i == j) continue; // 跳过自己
+
+            if (read_gpio_level(RX_PORTS[j], RX_PINS[j]) == 1) 
+            {
+								return ((uint16_t)(i + 1) << 8) | (j + 1);  //返回16位的数
+            }
+        }
+        // TX拉低
+        ctrl_tx_pin(TX_PORTS[i], TX_PINS[i], 0);
+    }
+		
+    return 0;
+}
+
+
 //检测线是否是is_SFTP  返回1则是 返回0则不是
 uint8_t is_SFTP(void)
 {

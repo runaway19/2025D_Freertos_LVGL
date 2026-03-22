@@ -97,7 +97,7 @@ void MX_GPIO_Init(void)
                           |TX_5_Pin|TX_6_Pin|TX_7_Pin|TX_8_Pin
                           |TX_9_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
@@ -112,7 +112,7 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = RX_1_Pin|RX_2_Pin|RX_3_Pin|RX_4_Pin
                           |RX_5_Pin|RX_6_Pin|RX_7_Pin|RX_8_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
