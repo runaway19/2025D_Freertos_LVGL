@@ -268,16 +268,24 @@ void key_change_mode(void const * argument)
 
   for(;;)
   {
-		uint16_t result = detect_short();
-		uint8_t high		= result >> 8;   // 拿到高8位
-    uint8_t low     = result & 0xFF; // 拿到低8位
-		
-		USART1_Printf("GPIO:%d,%d\n", high,low);
+		USART1_Printf("is_SHORT:%d\n",detect_short());
+
+			for (int i = 0; i < 8; i++) 
+			{
+					for (int j = 0; j < 8; j++) 
+					{
+						if(short_matrix[i][j])
+						{
+							USART1_Printf("GPIO:%d,%d\n", i+1,j+1);
+						}
+					}
+			}
+
 
 		
 //		uint8_t type = is_SFTP();
-//		USART1_Printf("GPIO:%d\n", read_gpio_level(GPIOC, RX_9_Pin));
-//		 
+//		USART1_Printf("is_SFTP:%d\n",  read_gpio_level(GPIOC, RX_9_Pin));
+			
 //		USART1_Printf("is_SFTP:%d\n", type);
     osDelay(20);
   }

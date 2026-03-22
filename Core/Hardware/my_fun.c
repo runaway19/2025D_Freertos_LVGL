@@ -8,12 +8,27 @@ uint16_t TX_PINS[] = {TX_1_Pin, TX_2_Pin, TX_3_Pin, TX_4_Pin, TX_5_Pin, TX_6_Pin
 GPIO_TypeDef* RX_PORTS[] = {GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD}; 
 uint16_t RX_PINS[] = {RX_1_Pin, RX_2_Pin, RX_3_Pin, RX_4_Pin, RX_5_Pin, RX_6_Pin, RX_7_Pin, RX_8_Pin};
 
+//记录短路情况
+uint8_t short_matrix[8][8] = {0};  
+
+
 /**
  * @brief  检测 1-8 号线是否存在短路
- * @return uint8_t: 0-正常, num-与那条短路
+ * @return uint8_t: 0-正常, 1-存在短路
  */
 uint16_t detect_short(void)
 {
+		uint8_t is_short = 0;
+	
+		//清空记录数据
+		for (int i = 0; i < 8; i++) 
+		{
+					for (int j = 0; j < 8; j++) 
+					{
+							short_matrix[i][j] = 0;
+					}
+		}
+	
     // TX 引脚都拉低
     for (int i = 0; i < 8; i++) 
 	  {
@@ -33,14 +48,15 @@ uint16_t detect_short(void)
 
             if (read_gpio_level(RX_PORTS[j], RX_PINS[j]) == 1) 
             {
-								return ((uint16_t)(i + 1) << 8) | (j + 1);  //返回16位的数
+								is_short = 1;
+								short_matrix[i][j] = 1;
             }
         }
         // TX拉低
         ctrl_tx_pin(TX_PORTS[i], TX_PINS[i], 0);
     }
 		
-    return 0;
+    return is_short;
 }
 
 
