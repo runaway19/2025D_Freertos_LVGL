@@ -10,6 +10,8 @@
 #include "lv_port_indev.h"
 #include "usart.h"
 
+#include "lvgl.h"
+
 void init_lvgl(void);
 	
 #endif

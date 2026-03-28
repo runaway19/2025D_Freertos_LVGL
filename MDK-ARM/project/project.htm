@@ -3,7 +3,7 @@
 <title>Static Call Graph - [project\project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image project\project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Mar 28 18:02:57 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Mar 28 19:06:35 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2579,10 +2579,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 </UL>
-<BR>[Called By]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
+<BR>[Called By]<UL><LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj
 <LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_top_obj
 <LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_is_any
@@ -2645,10 +2645,6 @@ Global Symbols
 <LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text_fmt
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_ver_res
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_sys
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_size
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
@@ -2657,6 +2653,10 @@ Global Symbols
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_clear
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
+<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_sys
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_get_idle
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_free_all
 <LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_is_empty
@@ -2712,9 +2712,9 @@ Global Symbols
 <P><STRONG><a name="[240]"></a>_lv_img_cache_open</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, lv_img_cache.o(i._lv_img_cache_open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = _lv_img_cache_open &rArr; lv_img_decoder_open &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<BR>[Calls]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_open
 </UL>
 <BR>[Called By]<UL><LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
@@ -2744,9 +2744,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_act
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_y
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_x
@@ -2759,6 +2756,9 @@ Global Symbols
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elastic_diff
 <LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_point_transform
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
 </UL>
@@ -2768,8 +2768,6 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_act
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_y
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_x
@@ -2779,6 +2777,8 @@ Global Symbols
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elastic_diff
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
 <LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
@@ -2792,8 +2792,8 @@ Global Symbols
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_ver_res
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_is_invalidation_enabled
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
+<LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_is_invalidation_enabled
 </UL>
 <BR>[Called By]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
@@ -2817,12 +2817,12 @@ Global Symbols
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
-<LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
-<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
 <LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
+<LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
+<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_ready_cb
 <LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_get
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
@@ -2848,11 +2848,11 @@ Global Symbols
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
+<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
 <LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
 <LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
-<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_ready_cb
 <LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_get
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
@@ -2891,13 +2891,13 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[20f]"></a>_lv_ll_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_ll.o(i._lv_ll_init))
 <BR><BR>[Called By]<UL><LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_init
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
-<LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_group_init
 <LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_timer_core_init
 <LI><a href="#[265]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_init
 <LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_decoder_init
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_fs_init
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_group_init
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_constructor
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_meter_constructor
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_menu_constructor
@@ -2910,10 +2910,10 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_create
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
-<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
 <LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_decoder_init
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_menu_set_page
 </UL>
 
@@ -2991,11 +2991,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
+<BR>[Called By]<UL><LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_arc_dsc
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_event
 </UL>
 
@@ -3205,11 +3205,11 @@ Global Symbols
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_start_value
 <LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_style
 <LI><a href="#[38d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_destructor
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
 <LI><a href="#[3a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_del
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_destructor
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_position
@@ -3300,13 +3300,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_resume
 <LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_pause
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_head
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_is_empty
 </UL>
 <BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_set_cursor_pos
@@ -3367,8 +3367,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[21d]"></a>lv_area_get_size</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, lv_area.o(i.lv_area_get_size))
-<BR><BR>[Called By]<UL><LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<BR><BR>[Called By]<UL><LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_disp_refr_timer
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_sw_line
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_sw_layer_create
@@ -3562,11 +3562,11 @@ Global Symbols
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_ext_draw_size
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_calendar_constructor
@@ -3632,12 +3632,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_map
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_prev
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_len
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_event
 </UL>
@@ -3711,9 +3711,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = lv_disp_drv_update &rArr; lv_obj_invalidate &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
+<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[333]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_tree_walk
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set_height
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set_width
@@ -3732,6 +3732,7 @@ Global Symbols
 <LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_get_color_primary
 <LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_default_init
 <LI><a href="#[2d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_top
+<LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_apply
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
@@ -3739,7 +3740,6 @@ Global Symbols
 <LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_theme
 <LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_scr_prev
 <LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_sys
-<LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_disp_refr_timer
 </UL>
 
@@ -3761,9 +3761,9 @@ Global Symbols
 <P><STRONG><a name="[21f]"></a>lv_disp_get_hor_res</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, lv_hal_disp.o(i.lv_disp_get_hor_res))
 <BR><BR>[Called By]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by
 <LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_default_init
-<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read_timer_cb
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_disp_refr_timer
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_sw_line
@@ -3776,8 +3776,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<BR>[Called By]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_disp_refr_timer
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
 </UL>
@@ -3787,8 +3787,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<BR>[Called By]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
 </UL>
 
@@ -3806,8 +3806,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_lvgl
-<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[443]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj_and_children
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
 </UL>
@@ -3833,9 +3833,9 @@ Global Symbols
 <P><STRONG><a name="[224]"></a>lv_disp_get_ver_res</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, lv_hal_disp.o(i.lv_disp_get_ver_res))
 <BR><BR>[Called By]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by
 <LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
-<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read_timer_cb
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_disp_refr_timer
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
 </UL>
@@ -3846,8 +3846,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
 <BR>[Called By]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
-<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 </UL>
 
 <P><STRONG><a name="[1f6]"></a>lv_disp_set_rotation</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, lv_hal_disp.o(i.lv_disp_set_rotation))
@@ -4232,8 +4232,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = lv_draw_sw_blend_basic &rArr; lv_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_size
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_refr_get_disp_refreshing
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_fill
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_move
@@ -4253,11 +4253,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_size
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_refr_get_disp_refreshing
 <LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_ff
 <LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_transform
@@ -4315,10 +4315,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_refr_get_disp_refreshing
 <LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_is_any
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_apply
@@ -4434,11 +4434,11 @@ Global Symbols
 <LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_flag
 <LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_state
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_ver_res
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_screen
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y2
 <LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_style_text_align
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text_static
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;position_to_selected
@@ -4614,16 +4614,6 @@ Global Symbols
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_ext_draw_size
 <LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_calendar_set_showed_date
-<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
-<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_y_anim
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_anim_ready_cb
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
-<LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_height
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
@@ -4639,6 +4629,16 @@ Global Symbols
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_send_data
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
+<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_y_anim
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_anim_ready_cb
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
+<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
+<LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_height
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
 <LI><a href="#[3c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_redraw
 <LI><a href="#[443]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj_and_children
@@ -4775,8 +4775,8 @@ Global Symbols
 <P><STRONG><a name="[362]"></a>lv_fs_read</STRONG> (Thumb, 396 bytes, Stack size 48 bytes, lv_fs.o(i.lv_fs_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = lv_fs_read &rArr; lv_mem_alloc &rArr; lv_tlsf_malloc &rArr; block_locate_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_built_in_read_line
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_built_in_open
@@ -4821,13 +4821,13 @@ Global Symbols
 <P><STRONG><a name="[364]"></a>lv_group_add_obj</STRONG> (Thumb, 274 bytes, Stack size 24 bytes, lv_group.o(i.lv_group_add_obj))
 <BR><BR>[Stack]<UL><LI>Max Depth = 332<LI>Call Chain = lv_group_add_obj &rArr; lv_group_remove_obj &rArr; focus_next_core &rArr; lv_obj_invalidate &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<BR>[Calls]<UL><LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_tail
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
+<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_constructor
@@ -4847,12 +4847,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_type
-<LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
 </UL>
@@ -4896,15 +4896,15 @@ Global Symbols
 <P><STRONG><a name="[365]"></a>lv_group_remove_obj</STRONG> (Thumb, 240 bytes, Stack size 24 bytes, lv_group.o(i.lv_group_remove_obj))
 <BR><BR>[Stack]<UL><LI>Max Depth = 308<LI>Call Chain = lv_group_remove_obj &rArr; focus_next_core &rArr; lv_obj_invalidate &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
-<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<BR>[Calls]<UL><LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
+<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_destructor
@@ -5010,10 +5010,10 @@ Global Symbols
 <P><STRONG><a name="[28f]"></a>lv_img_decoder_get_info</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, lv_img_decoder.o(i.lv_img_decoder_get_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = lv_img_decoder_get_info &rArr; lv_memset_00
 </UL>
-<BR>[Calls]<UL><LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<BR>[Calls]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
@@ -5025,12 +5025,12 @@ Global Symbols
 <P><STRONG><a name="[241]"></a>lv_img_decoder_open</STRONG> (Thumb, 216 bytes, Stack size 40 bytes, lv_img_decoder.o(i.lv_img_decoder_open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = lv_img_decoder_open &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<BR>[Calls]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 </UL>
@@ -5050,10 +5050,10 @@ Global Symbols
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_size
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_ext_draw_size
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
-<LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
-<LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_src_get_type
+<LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
@@ -5092,10 +5092,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[246]"></a>lv_indev_get_act</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_indev.o(i.lv_indev_get_act))
-<BR><BR>[Called By]<UL><LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_send_core
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_send_core
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_colorwheel_event
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_event
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_spinbox_event
@@ -5116,9 +5116,9 @@ Global Symbols
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
 </UL>
 <BR>[Called By]<UL><LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_reset
+<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
-<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_del_core
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_event
 </UL>
@@ -5154,9 +5154,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2ca]"></a>lv_indev_get_type</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_indev.o(i.lv_indev_get_type))
-<BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_colorwheel_event
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_spinbox_event
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_arc_event
@@ -5182,6 +5182,13 @@ Global Symbols
 <LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_state
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_ver_res
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
+<LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_editable
+<LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_read
+<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
+<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
+<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_send_data
+<LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_obj_count
 <LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_focused
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_prev
@@ -5190,13 +5197,6 @@ Global Symbols
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_editable
-<LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_read
-<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_send_data
-<LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_obj_count
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_hal_indev.o(i.lv_indev_drv_register)
 </UL>
@@ -5225,11 +5225,11 @@ Global Symbols
 <LI>Call Chain = lv_indev_search_obj &rArr;  lv_indev_search_obj (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
 <LI><a href="#[376]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_hit_test
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 <LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
 <LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
@@ -5242,8 +5242,7 @@ Global Symbols
 <P><STRONG><a name="[2e2]"></a>lv_init</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, lv_obj.o(i.lv_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = lv_init &rArr; lv_extra_init &rArr; lv_grid_init &rArr; lv_layout_register &rArr; lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_group_init
-<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_init
+<BR>[Calls]<UL><LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_init
 <LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_extra_init
 <LI><a href="#[378]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_init
 <LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_timer_core_init
@@ -5253,6 +5252,7 @@ Global Symbols
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_fs_init
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_init
+<LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_group_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_lvgl
 </UL>
@@ -5396,9 +5396,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 408<LI>Call Chain = lv_label_set_text &rArr; lv_label_refr_text &rArr; lv_txt_get_size &rArr; _lv_txt_get_next_line &rArr; lv_font_get_glyph_width
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[385]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
@@ -5485,12 +5485,12 @@ Global Symbols
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_default_init
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
-<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
 <LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_tail
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_head
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_remove_prop
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_trans_style
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_local_style
@@ -5659,9 +5659,9 @@ Global Symbols
 <LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_style
 <LI><a href="#[3a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_style
 <LI><a href="#[31a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_event_cb
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_layout_register
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
+<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_layout_register
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_trans_style
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_local_style
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_del_core
@@ -5716,18 +5716,18 @@ Global Symbols
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_line_points_init
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_init
-<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
-<LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_init
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_init
-<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_draw_buf_init
-<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
 <LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_decoder_init
 <LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_read
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
+<LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_init
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_init
+<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_draw_buf_init
+<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_trans_style
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_local_style
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
@@ -5782,12 +5782,12 @@ Global Symbols
 <LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_flag
 <LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_state
 <LI><a href="#[2fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_flag
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_head
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_clear
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_menu_back_event_cb
 </UL>
@@ -5813,12 +5813,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
-<LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_focused
-<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_next
 <LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
 <LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
+<LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_focused
+<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_next
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_calendar_constructor
 <LI><a href="#[316]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl_all
@@ -5855,9 +5855,9 @@ Global Symbols
 <P><STRONG><a name="[3a0]"></a>lv_obj_add_style</STRONG> (Thumb, 202 bytes, Stack size 32 bytes, lv_obj_style.o(i.lv_obj_add_style))
 <BR><BR>[Stack]<UL><LI>Max Depth = 340<LI>Call Chain = lv_obj_add_style &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<BR>[Calls]<UL><LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[3a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_del
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;theme_apply
@@ -5884,14 +5884,14 @@ Global Symbols
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
+<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
+<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[3a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_style_y
 <LI><a href="#[3a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_style_x
 <LI><a href="#[3a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_style_align
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_local_style_prop
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
-<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
-<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
 <LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_lvgl
@@ -5909,13 +5909,13 @@ Global Symbols
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_ext_draw_size
 <LI><a href="#[31a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_event_cb
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_y_anim
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
-<LI><a href="#[300]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_ext_click_area
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_scroll_by_raw
 <LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_y_anim
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
+<LI><a href="#[300]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_ext_click_area
 <LI><a href="#[32f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_scrollbar_mode
 <LI><a href="#[3d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_scroll_snap_x
 </UL>
@@ -5927,6 +5927,7 @@ Global Symbols
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[2d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_top
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
+<LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
 <LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_scr_prev
@@ -5934,11 +5935,10 @@ Global Symbols
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_screen
 <LI><a href="#[3a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_transformed_area
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_get_ext_draw_size
-<LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 </UL>
 <BR>[Called By]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
-<LI><a href="#[2ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_visible
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
+<LI><a href="#[2ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_visible
 </UL>
 
 <P><STRONG><a name="[30c]"></a>lv_obj_calculate_ext_draw_size</STRONG> (Thumb, 232 bytes, Stack size 24 bytes, lv_obj_draw.o(i.lv_obj_calculate_ext_draw_size))
@@ -5976,11 +5976,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_ver_res
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
-<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
@@ -6000,13 +6000,13 @@ Global Symbols
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_default
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
+<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
+<LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_enable_style_refresh
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_apply
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_construct
-<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
-<LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_enable_style_refresh
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
@@ -6170,10 +6170,6 @@ Global Symbols
 <P><STRONG><a name="[2bc]"></a>lv_obj_get_child_cnt</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_obj_tree.o(i.lv_obj_get_child_cnt))
 <BR><BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_calendar_set_showed_date
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
-<LI><a href="#[2f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;layout_update_core
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
@@ -6182,6 +6178,10 @@ Global Symbols
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
 <LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
+<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
+<LI><a href="#[2f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;layout_update_core
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_report_style_change
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;report_style_change_core
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
@@ -6292,12 +6292,12 @@ Global Symbols
 <LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_get_color_primary
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
+<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_apply
 <LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_layout
 <LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
-<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_del_core
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;invalidate_button_area
 <LI><a href="#[385]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
@@ -6305,9 +6305,9 @@ Global Symbols
 
 <P><STRONG><a name="[2d8]"></a>lv_obj_get_group</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_obj.o(i.lv_obj_get_group))
 <BR><BR>[Called By]<UL><LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
-<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_del_core
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_spinbox_event
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_arc_event
@@ -6320,11 +6320,11 @@ Global Symbols
 
 <P><STRONG><a name="[8a]"></a>lv_obj_get_height</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_obj_pos.o(i.lv_obj_get_height))
 <BR><BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_constructor
@@ -6379,6 +6379,13 @@ Global Symbols
 <LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_view_recursive
 <LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_flag
 <LI><a href="#[2fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_flag
+<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
+<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
+<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
+<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
+<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
 <LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
@@ -6387,13 +6394,6 @@ Global Symbols
 <LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
 <LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
-<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
-<LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
-<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
-<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
-<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
-<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
 <LI><a href="#[443]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj_and_children
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
@@ -6417,11 +6417,11 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_screen
 <LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_layout
 <LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_constructor
 </UL>
 
@@ -6431,14 +6431,14 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_height
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_height
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
-<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
+<BR>[Called By]<UL><LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
 </UL>
 
@@ -6462,19 +6462,19 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
 </UL>
 <BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_set_cursor_pos
 <LI><a href="#[2e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_to
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_constructor
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
 <LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_get_point_pos_by_id
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_event
@@ -6488,16 +6488,16 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_self_width
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_to
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
 </UL>
 
@@ -6518,10 +6518,10 @@ Global Symbols
 <P><STRONG><a name="[24b]"></a>lv_obj_get_scroll_top</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_obj_scroll.o(i.lv_obj_get_scroll_top))
 <BR><BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_set_cursor_pos
 <LI><a href="#[2e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_to
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_constructor
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_get_point_pos_by_id
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_event
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_y_ticks
@@ -6529,9 +6529,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2ab]"></a>lv_obj_get_scroll_x</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_obj_scroll.o(i.lv_obj_get_scroll_x))
-<BR><BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_x
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_line_event
@@ -6541,10 +6541,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2aa]"></a>lv_obj_get_scroll_y</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_obj_scroll.o(i.lv_obj_get_scroll_y))
-<BR><BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y2
 <LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_y
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_line_event
@@ -6560,20 +6560,20 @@ Global Symbols
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_dpi
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_dir
 <LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_flag
 <LI><a href="#[2fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_flag
-<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 </UL>
 
 <P><STRONG><a name="[3b7]"></a>lv_obj_get_scrollbar_mode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_obj_scroll.o(i.lv_obj_get_scrollbar_mode))
@@ -6608,12 +6608,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
+<BR>[Called By]<UL><LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_arc_dsc
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_meter_event
 </UL>
 
@@ -6636,6 +6636,23 @@ Global Symbols
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
+<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
+<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
+<LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_constructor
+<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
+<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
+<LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
+<LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
+<LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elastic_diff
+<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
@@ -6654,23 +6671,6 @@ Global Symbols
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_arc_dsc
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
-<LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
-<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
-<LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_constructor
-<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
-<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
-<LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
-<LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
-<LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elastic_diff
-<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
-<LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_style_text_align
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_start_cb
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
@@ -6733,8 +6733,8 @@ Global Symbols
 <P><STRONG><a name="[3a9]"></a>lv_obj_get_transformed_area</STRONG> (Thumb, 344 bytes, Stack size 40 bytes, lv_obj_pos.o(i.lv_obj_get_transformed_area))
 <BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
-<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
+<BR>[Calls]<UL><LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
+<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj
@@ -6742,12 +6742,12 @@ Global Symbols
 
 <P><STRONG><a name="[89]"></a>lv_obj_get_width</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_obj_pos.o(i.lv_obj_get_width))
 <BR><BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_knob_pos
@@ -6803,13 +6803,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[249]"></a>lv_obj_has_flag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lv_obj.o(i.lv_obj_has_flag))
-<BR><BR>[Called By]<UL><LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_send_core
-<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
-<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
-<LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
+<BR><BR>[Called By]<UL><LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elastic_diff
@@ -6819,6 +6813,12 @@ Global Symbols
 <LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read_timer_cb
 <LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_press
+<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
+<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_send_core
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
+<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
+<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[3c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_redraw
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_obj
 <LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_top_obj
@@ -6833,15 +6833,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2bd]"></a>lv_obj_has_flag_any</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_obj.o(i.lv_obj_has_flag_any))
-<BR><BR>[Called By]<UL><LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[2fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_pos
-<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
-<LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
+<BR><BR>[Called By]<UL><LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_layout_positioned
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_y
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_snap_point_x
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[2fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_pos
+<LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_area_is_visible
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[2be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_track_end
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
@@ -6857,9 +6857,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = lv_obj_hit_test &rArr; lv_event_send &rArr; event_send_core &rArr;  event_send_core (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_state
+<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
 </UL>
@@ -6977,6 +6977,12 @@ Global Symbols
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_calendar_set_showed_date
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_arc_set_start_angle
+<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
+<LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
+<LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_scroll_by_raw
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
+<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
@@ -6984,12 +6990,6 @@ Global Symbols
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
-<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
-<LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
-<LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_scroll_by_raw
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
 <LI><a href="#[32f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_scrollbar_mode
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
@@ -7033,8 +7033,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_flag
 <LI><a href="#[2fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_flag
-<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_knob_pos
 <LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;invalidate_point
 <LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_knob_area
@@ -7096,11 +7096,11 @@ Global Symbols
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
 </UL>
 <BR>[Called By]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by
+<LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_scroll_by_raw
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_y_anim
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_x_anim
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
-<LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_scroll_by_raw
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_update
 </UL>
@@ -7111,14 +7111,14 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
+<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
+<LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
+<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
 <LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
-<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
-<LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_pos
 </UL>
@@ -7171,9 +7171,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
+<LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
-<LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[2f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;layout_update_core
@@ -7188,17 +7188,17 @@ Global Symbols
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
-<LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
-<LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
+<LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
+<LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[2f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;layout_update_core
@@ -7216,9 +7216,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_roller_set_options
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_map
 <LI><a href="#[316]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl_all
 <LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl
@@ -7255,17 +7255,17 @@ Global Symbols
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
 <LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
 <LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_style_prop_lookup_flags
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_style
 <LI><a href="#[3a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_style
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_local_style_prop
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
 <LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
+<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_local_style_prop
 <LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_local_style_prop
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_report_style_change
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_cb
@@ -7286,17 +7286,17 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_reset
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_prev
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_remove_prop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_destructor
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_apply
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_destructor
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_ready_cb
 </UL>
 
@@ -7304,8 +7304,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 364<LI>Call Chain = lv_obj_report_style_change &rArr; report_style_change_core &rArr;  report_style_change_core (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
 <LI><a href="#[3a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
+<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;report_style_change_core
 </UL>
 <BR>[Called By]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_default_init
@@ -7326,9 +7326,9 @@ Global Symbols
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
 <LI><a href="#[38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_speed_to_time
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
+<BR>[Called By]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
+<LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scroll_area_into_view
 <LI><a href="#[2fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_readjust_scroll
-<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
 </UL>
 
@@ -7343,9 +7343,9 @@ Global Symbols
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
-<LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
+<BR>[Called By]<UL><LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
+<LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_table_event
 </UL>
 
@@ -7377,8 +7377,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_set_cursor_pos
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_act
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 </UL>
 
 <P><STRONG><a name="[3b4]"></a>lv_obj_scroll_to_y</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, lv_obj_scroll.o(i.lv_obj_scroll_to_y))
@@ -7389,8 +7389,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_set_cursor_pos
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_act
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;position_to_selected
 </UL>
 
@@ -7402,9 +7402,9 @@ Global Symbols
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_size
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_to
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 </UL>
 
 <P><STRONG><a name="[300]"></a>lv_obj_set_ext_click_area</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lv_obj_pos.o(i.lv_obj_set_ext_click_area))
@@ -7520,12 +7520,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_index
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_spec_attr
 <LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scrollbar_invalidate
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
-<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_menu_set_page
@@ -7795,13 +7795,13 @@ Global Symbols
 <LI>Call Chain = lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
+<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
 <LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transform_point
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_get_layer_type
-<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_transformed_area
-<LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
+<BR>[Called By]<UL><LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_transform_point
 <LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
+<LI><a href="#[3a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_transformed_area
 </UL>
 
 <P><STRONG><a name="[333]"></a>lv_obj_tree_walk</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lv_obj_tree.o(i.lv_obj_tree_walk))
@@ -7864,9 +7864,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_trigo_sin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transform_point
-<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<BR>[Called By]<UL><LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
 <LI><a href="#[2da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
+<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transform_point
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_buf_get_transformed_area
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_meter_event
 </UL>
@@ -7939,8 +7939,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_prop_get_default
 </UL>
 <BR>[Called By]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
-<LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_local_style_prop
 <LI><a href="#[266]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_state_compare
+<LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_local_style_prop
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_cb
 </UL>
 
@@ -8423,9 +8423,9 @@ Global Symbols
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_update_layout
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_event
@@ -8565,11 +8565,11 @@ Global Symbols
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_init
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
@@ -8640,8 +8640,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_hor_res
-<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_theme
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_theme
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_report_style_change
 <LI><a href="#[41f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;style_init
 </UL>
@@ -8702,12 +8702,12 @@ Global Symbols
 <P><STRONG><a name="[210]"></a>lv_timer_create</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, lv_timer.o(i.lv_timer_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = lv_timer_create &rArr; _lv_ll_ins_head &rArr; lv_mem_alloc &rArr; lv_tlsf_malloc &rArr; block_locate_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_head
+<BR>[Calls]<UL><LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_ins_head
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
+<BR>[Called By]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
-<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
 </UL>
 
 <P><STRONG><a name="[239]"></a>lv_timer_get_idle</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_timer.o(i.lv_timer_get_idle))
@@ -8717,12 +8717,12 @@ Global Symbols
 <P><STRONG><a name="[1f8]"></a>lv_timer_handler</STRONG> (Thumb, 356 bytes, Stack size 40 bytes, lv_timer.o(i.lv_timer_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = lv_timer_handler &rArr; lv_mem_free &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
-<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVGL_TaskHandler_Task
 </UL>
@@ -8745,11 +8745,11 @@ Global Symbols
 <P><STRONG><a name="[211]"></a>lv_timer_resume</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_timer.o(i.lv_timer_resume))
 <BR><BR>[Called By]<UL><LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
+<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_inv_area
 <LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_layout
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
-<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_anim_core_init
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;anim_timer
 </UL>
 
@@ -8767,9 +8767,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<BR>[Called By]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_free_all
 <LI><a href="#[394]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
@@ -8785,9 +8785,9 @@ Global Symbols
 <LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_locate_free
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<BR>[Called By]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[394]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 
@@ -8801,8 +8801,8 @@ Global Symbols
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_merge_next
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;block_insert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<BR>[Called By]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 
 <P><STRONG><a name="[397]"></a>lv_tlsf_walk_pool</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, lv_tlsf.o(i.lv_tlsf_walk_pool))
@@ -9588,15 +9588,15 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
+<LI><a href="#[2c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_state
 <LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_indev
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_state
 </UL>
 <BR>[Called By]<UL><LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_add_obj
+<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_prev
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_next
-<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
 </UL>
 
 <P><STRONG><a name="[2c3]"></a>get_indev</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, lv_group.o(i.get_indev))
@@ -9605,10 +9605,10 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_type
 <LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
-<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
+<BR>[Called By]<UL><LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
+<LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
 </UL>
 
 <P><STRONG><a name="[2d4]"></a>indev_proc_press</STRONG> (Thumb, 1194 bytes, Stack size 24 bytes, lv_indev.o(i.indev_proc_press))
@@ -9617,16 +9617,16 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_scr_act
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[2d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_top
+<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
+<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
+<LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_layer_sys
-<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
-<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
-<LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_search_obj
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read_timer_cb
 </UL>
@@ -9636,9 +9636,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_point_transform
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_read_timer_cb
 </UL>
@@ -9647,10 +9647,10 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = elastic_diff &rArr; lv_obj_get_style_prop &rArr; lv_style_get_prop &rArr; lv_style_prop_get_default
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_y
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_x
 <LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_obj_act
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
@@ -9661,9 +9661,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_x
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
@@ -9674,9 +9674,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_snap_y
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_throw_handler
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_indev_scroll_handler
@@ -9696,10 +9696,10 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_style
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_event_mark_deleted
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_enable_style_refresh
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_remove_obj
+<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_event_mark_deleted
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_obj.o(.constdata)
 </UL>
@@ -9715,7 +9715,6 @@ Local Symbols
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_add
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scrollbar_area
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
@@ -9726,6 +9725,7 @@ Local Symbols
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_free_param
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_size
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event
 </UL>
@@ -9744,9 +9744,6 @@ Local Symbols
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[3b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_current_target
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
-<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
-<LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_indev
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_x
 <LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_mark_layout_as_dirty
@@ -9763,6 +9760,9 @@ Local Symbols
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_dir
 <LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_editable
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
+<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
+<LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_indev
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_obj.o(.constdata)
 </UL>
@@ -9792,8 +9792,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_construct
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_construct
-<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
+<BR>[Called By]<UL><LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
+<LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_construct
 </UL>
 
 <P><STRONG><a name="[2f9]"></a>layout_update_core</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, lv_obj_pos.o(i.layout_update_core))
@@ -9836,11 +9836,11 @@ Local Symbols
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_right
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_bottom
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_view_recursive
 </UL>
@@ -9877,9 +9877,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = get_local_style &rArr; lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_init
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_local_style_prop
 </UL>
@@ -9888,9 +9888,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = get_trans_style &rArr; lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_init
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_create_transition
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;trans_anim_start_cb
@@ -9973,14 +9973,14 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_reset
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_index
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[427]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_destruct
 <LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_obj_act
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
+<LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[427]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_destruct
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_del_core
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
@@ -10013,10 +10013,10 @@ Local Symbols
 <LI>Call Chain = lv_refr_get_top_obj &rArr;  lv_refr_get_top_obj (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
+<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_get_layer_type
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_top_obj
 </UL>
 <BR>[Called By]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_area_part
@@ -10052,6 +10052,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
+<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
@@ -10059,7 +10060,6 @@ Local Symbols
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_get_layer_type
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_get_ext_draw_size
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_layer_destroy
 <LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_layer_create
 <LI><a href="#[445]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_layer_blend
@@ -10140,8 +10140,8 @@ Local Symbols
 <P><STRONG><a name="[b3]"></a>kill_oldest_item</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, lv_draw_sw_gradient.o(i.kill_oldest_item))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = kill_oldest_item &rArr; lv_memcpy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<BR>[Calls]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_draw_sw_gradient.o(i.lv_gradient_get)
 </UL>
@@ -10188,14 +10188,14 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_remove_id
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_add
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_free_param
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
+<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_ff
 <LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_is_any
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_apply
@@ -10210,9 +10210,9 @@ Local Symbols
 <P><STRONG><a name="[2b2]"></a>shadow_blur_corner</STRONG> (Thumb, 428 bytes, Stack size 72 bytes, lv_draw_sw_rect.o(i.shadow_blur_corner))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = shadow_blur_corner &rArr; lv_mem_buf_get &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
+<BR>[Calls]<UL><LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_shadow
 </UL>
@@ -10246,11 +10246,11 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flex_update
 </UL>
@@ -10265,14 +10265,14 @@ Local Symbols
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;place_content
 <LI><a href="#[2be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_track_end
 </UL>
@@ -10307,16 +10307,16 @@ Local Symbols
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child_cnt
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
-<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memset_00
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag_any
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refr_size
+<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_move_children_by
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set_height
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set_width
 <LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;grid_align
@@ -10560,11 +10560,11 @@ Local Symbols
 <LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_map
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line_dsc_init
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
 </UL>
@@ -10580,12 +10580,12 @@ Local Symbols
 <LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_map
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
-<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line_dsc_init
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
 </UL>
@@ -10598,9 +10598,9 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_width
-<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_left
+<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_event
 </UL>
@@ -10637,12 +10637,6 @@ Local Symbols
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
-<LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
@@ -10651,6 +10645,12 @@ Local Symbols
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_prev
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_len
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
+<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
+<LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
 <LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_is_empty
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line_dsc_init
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
@@ -10694,17 +10694,17 @@ Local Symbols
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_remove_id
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_add
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_free_param
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 <LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_wait_release
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line_dsc_init
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_knob_pos
@@ -10743,9 +10743,9 @@ Local Symbols
 <P><STRONG><a name="[37b]"></a>lv_keyboard_update_ctrl_map</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, lv_keyboard.o(i.lv_keyboard_update_ctrl_map))
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = lv_keyboard_update_ctrl_map &rArr; lv_btnmatrix_set_ctrl_map &rArr; lv_btnmatrix_set_map &rArr; lv_obj_refresh_ext_draw_size &rArr; lv_obj_invalidate &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_ctrl_map
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_keyboard_def_event_cb
@@ -10777,10 +10777,10 @@ Local Symbols
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[391]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 <LI><a href="#[390]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_brightness
 </UL>
@@ -10816,10 +10816,10 @@ Local Symbols
 <LI><a href="#[31a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_event_cb
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
-<LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_layout
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_init
+<LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_layout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_menu.o(.constdata)
 </UL>
@@ -10907,13 +10907,6 @@ Local Symbols
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_add
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
-<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
@@ -10921,6 +10914,13 @@ Local Symbols
 <LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_point_transform
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_tail
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_prev
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
+<LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
+<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
+<LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
 <LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img_dsc_init
 <LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
@@ -10949,9 +10949,9 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[382]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_get_text
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_cursor_left
 <LI><a href="#[3e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_spinbox_updatevalue
@@ -11152,12 +11152,12 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_resume
 <LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_pause
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
-<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_remove
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_next
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_get_head
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_get
+<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_anim.o(i._lv_anim_core_init)
 </UL>
@@ -11196,8 +11196,8 @@ Local Symbols
 <P><STRONG><a name="[409]"></a>lv_style_set_prop_internal</STRONG> (Thumb, 306 bytes, Stack size 32 bytes, lv_style.o(i.lv_style_set_prop_internal))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = lv_style_set_prop_internal &rArr; lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_set_prop
 </UL>
@@ -11288,8 +11288,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 292<LI>Call Chain = inv_arc_area &rArr; lv_obj_invalidate_area &rArr; lv_obj_area_is_visible &rArr; lv_obj_get_transformed_area &rArr; lv_obj_transform_point &rArr;  lv_obj_transform_point (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
-<LI><a href="#[2ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_visible
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
+<LI><a href="#[2ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_visible
 <LI><a href="#[2ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_arc_get_area
 <LI><a href="#[2c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_center
 </UL>
@@ -11303,8 +11303,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_trigo_sin
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
-<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
+<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
 <LI><a href="#[2f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;knob_get_extra_size
 <LI><a href="#[2c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_center
 <LI><a href="#[2ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_angle
@@ -11347,6 +11347,12 @@ Local Symbols
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_dpi
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
+<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
@@ -11356,12 +11362,6 @@ Local Symbols
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_arc_dsc
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
-<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[301]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_arc_dsc_init
 <LI><a href="#[303]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_arc
 <LI><a href="#[305]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_atan2
@@ -11393,12 +11393,12 @@ Local Symbols
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_remove_id
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_add
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_radius_init
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_mask_free_param
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_event
 </UL>
@@ -11447,9 +11447,9 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[2a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_indic
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_bar.o(.constdata)
@@ -11468,8 +11468,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
-<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
+<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_event
 </UL>
@@ -11479,9 +11479,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_dpi
+<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 <LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
-<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate_area
 </UL>
 <BR>[Called By]<UL><LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_selected_btn
 <LI><a href="#[316]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl_all
@@ -11523,6 +11523,12 @@ Local Symbols
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_reset_long_press
+<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
@@ -11531,12 +11537,6 @@ Local Symbols
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
-<LI><a href="#[314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_reset_long_press
-<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_next
 <LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_map
 <LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_btn_ctrl
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;invalidate_button_area
@@ -11572,12 +11572,12 @@ Local Symbols
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_checkbox.o(.constdata)
 </UL>
@@ -11612,10 +11612,10 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[2fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_flag
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_screen
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_init_obj
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_class_create_obj
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_screen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_dropdown.o(.constdata)
 </UL>
@@ -11646,6 +11646,12 @@ Local Symbols
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
+<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
+<LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_obj_act
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_has_flag
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
@@ -11654,12 +11660,6 @@ Local Symbols
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
-<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
-<LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
-<LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_obj_act
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_get_info
 <LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img_dsc_init
 <LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
@@ -11682,13 +11682,13 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
+<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_box_label
 <LI><a href="#[297]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_box
 </UL>
@@ -11713,8 +11713,8 @@ Local Symbols
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_to_y
+<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_set_selected
 <LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_dropdown_open
@@ -11734,11 +11734,11 @@ Local Symbols
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
+<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_img_dsc
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_in
 <LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img_dsc_init
 <LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_buf_get_transformed_area
@@ -11773,9 +11773,9 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
+<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[36f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_click_area
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_is_point_on
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_img_buf_get_transformed_area
 <LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_img
 </UL>
@@ -11813,11 +11813,11 @@ Local Symbols
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
+<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
 <LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_obj_style_apply_color_filter
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_top
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_move
 <LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
 <LI><a href="#[384]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_revert_dots
@@ -11835,12 +11835,12 @@ Local Symbols
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_init
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
+<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
 <LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_content_coords
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
-<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_speed_to_time
 <LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_get
 <LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
@@ -11899,11 +11899,11 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
+<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
+<LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_line_dsc
-<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
-<LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line_dsc_init
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
 </UL>
@@ -11955,6 +11955,12 @@ Local Symbols
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_scroll_throw_predict
+<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_vect
+<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
+<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
+<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
@@ -11962,12 +11968,6 @@ Local Symbols
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_self_size
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_scroll_throw_predict
-<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_vect
-<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
-<LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_position
 <LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_recolor
@@ -12067,11 +12067,6 @@ Local Symbols
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_dsc_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[3e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_value
-<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
@@ -12079,6 +12074,11 @@ Local Symbols
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
+<LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_increase
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[3e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_start_value
 <LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_mode
 <LI><a href="#[3e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;position_knob
@@ -12137,10 +12137,10 @@ Local Symbols
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_init
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_calculate_ext_draw_size
 <LI><a href="#[2c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_state
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_switch.o(.constdata)
 </UL>
@@ -12156,13 +12156,13 @@ Local Symbols
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label_dsc_init
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 <LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_area_intersect
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
-<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
 <LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_draw_dsc_init
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
+<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_table_event
 </UL>
@@ -12181,8 +12181,8 @@ Local Symbols
 <P><STRONG><a name="[129]"></a>lv_table_constructor</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, lv_table.o(i.lv_table_constructor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = lv_table_constructor &rArr; lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_alloc
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_table.o(.constdata)
 </UL>
@@ -12205,12 +12205,12 @@ Local Symbols
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_param
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
-<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_y
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_scroll_x
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_scroll_obj
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
+<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_scroll_by_bounded
 <LI><a href="#[419]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_size_form_row
 <LI><a href="#[2c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_cell_area
@@ -12312,14 +12312,14 @@ Local Symbols
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_start
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_init
 <LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_del
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
+<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_vect
+<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_event_base
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_label_dsc
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_init_draw_rect_dsc
-<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_vect
-<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_move
 <LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_del_char
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
@@ -12334,9 +12334,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style_prop
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_release
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_buf_get
+<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_memcpy
 <LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_dsc
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
