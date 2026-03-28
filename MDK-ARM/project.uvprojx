@@ -805,6 +805,16 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Hardware\my_board.h</FilePath>
             </File>
+            <File>
+              <FileName>my_lvgl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Hardware\my_lvgl.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_lvgl.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Hardware\my_lvgl.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

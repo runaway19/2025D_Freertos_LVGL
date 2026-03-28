@@ -44,6 +44,7 @@
 #include "FT6336.h"
 #include "my_fun.h"
 #include "my_board.h"
+#include "my_lvgl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

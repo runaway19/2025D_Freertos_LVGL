@@ -30,6 +30,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "my_fun.h"
+#include "my_lvgl.h"
+#include "my_board.h"
 #include "usart.h"
 #include "gpio.h"
 #include "adc.h"
@@ -202,22 +204,10 @@ void BlinkLED2_Task(void const * argument)
 void LVGL_TaskHandler_Task(void const * argument)
 {
   /* USER CODE BEGIN LVGL_TaskHandler_Task */
-  USART1_Printf("%d : Run LVGL_TaskHandler_Task\r\n", osKernelSysTick());
-  lv_init(); // LVGL初始
-  USART1_Printf("%d : lv_init() Finish\r\n", osKernelSysTick());
-  lv_port_disp_init(); // LVGL显示初始
-  USART1_Printf("%d : lv_port_disp_init() Finish\r\n", osKernelSysTick());
-  LCD_Switch_Dir(0); // 旋转屏幕方向
-  USART1_Printf("%d : LCD_Switch_Dir(0) Finish\r\n", osKernelSysTick());
 
-  // LVGL自带示例程序
-//  lv_demo_widgets();
-  //  lv_demo_stress();
-  //  lv_demo_benchmark();
-//	lv_demo_music();
-
-  USART1_Printf("%d : LCD ID:%d\r\n", osKernelSysTick(), LCD_Read_ID());
-
+	//LVGL初始化
+	init_lvgl();
+	
   /* Infinite loop */
   for (;;)
   {

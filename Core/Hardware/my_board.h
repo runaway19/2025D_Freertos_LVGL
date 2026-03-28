@@ -18,7 +18,7 @@ extern ADC_HandleTypeDef hadc1;
 extern __IO uint8_t AdcConvEnd; 
 extern uint16_t adc_buffer[];
 
-
+//函数声明
 void init_board(void);
 
 
