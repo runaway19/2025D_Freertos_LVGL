@@ -17,6 +17,7 @@
 "project\ft6336.o"
 "project\touch.o"
 "project\my_fun.o"
+"project\my_board.o"
 "project\lv_demo_widgets.o"
 "project\img_clothes.o"
 "project\img_demo_widgets_avatar.o"

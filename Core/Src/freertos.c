@@ -2,7 +2,7 @@
 /*
  ******************************************************************************
  *    硬件接线
- *    LCD            F4�?发板        
+ *    LCD                   
  * ----------------------------------------------------------------------------
  *    GND       ->      GND         
  *    VCC       ->      5V        
@@ -211,10 +211,10 @@ void LVGL_TaskHandler_Task(void const * argument)
   USART1_Printf("%d : LCD_Switch_Dir(0) Finish\r\n", osKernelSysTick());
 
   // LVGL自带示例程序
-  lv_demo_widgets();
+//  lv_demo_widgets();
   //  lv_demo_stress();
   //  lv_demo_benchmark();
-  //  lv_demo_music();
+//	lv_demo_music();
 
   USART1_Printf("%d : LCD ID:%d\r\n", osKernelSysTick(), LCD_Read_ID());
 
@@ -268,8 +268,9 @@ void key_change_mode(void const * argument)
 
   for(;;)
   {
-		USART1_Printf("is_SHORT:%d\n",detect_short());
-
+		
+		/*
+			USART1_Printf("is_SHORT:%d\n",detect_short());
 			for (int i = 0; i < 8; i++) 
 			{
 					for (int j = 0; j < 8; j++) 
@@ -280,13 +281,13 @@ void key_change_mode(void const * argument)
 						}
 					}
 			}
+		*/
 
-
-		
-//		uint8_t type = is_SFTP();
-//		USART1_Printf("is_SFTP:%d\n",  read_gpio_level(GPIOC, RX_9_Pin));
-			
-//		USART1_Printf("is_SFTP:%d\n", type);
+		/*
+		uint8_t type = is_SFTP();
+		USART1_Printf("is_SFTP:%d\n",  read_gpio_level(GPIOC, RX_9_Pin));
+		USART1_Printf("is_SFTP:%d\n", type);
+		*/
     osDelay(20);
   }
   /* USER CODE END key_change_mode */

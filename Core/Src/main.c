@@ -43,17 +43,17 @@
 #include "touch.h"
 #include "FT6336.h"
 #include "my_fun.h"
+#include "my_board.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-__IO uint8_t AdcConvEnd = 0;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ADC_BUFFER_SIZE 1024
-uint16_t adc_buffer[ADC_BUFFER_SIZE];
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -118,14 +118,8 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	
-  HAL_TIM_Base_Start_IT(&htim3); // 启动定时器和定时器中 1Hz
-  HAL_TIM_Base_Start(&htim2);
-	
-	HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc_buffer, ADC_BUFFER_SIZE);
-	while (!AdcConvEnd)                                   //等待转换完毕
-    ;
-	
-	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
+	//初始化函数
+	init_board();
 	
   /* USER CODE END 2 */
 

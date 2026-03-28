@@ -795,6 +795,16 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Hardware\my_fun.h</FilePath>
             </File>
+            <File>
+              <FileName>my_board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Hardware\my_board.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_board.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Hardware\my_board.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
