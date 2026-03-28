@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Core/Hardware;../LVGL/GUI;../LVGL/GUI/lvgl;../LVGL/GUI/lvgl/src;../LVGL/GUI/lvgl/examples/porting;../LVGL/GUI_APP;../LVGL/GUI_APP/demos;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Core/Hardware;../LVGL/GUI;../LVGL/GUI/lvgl;../LVGL/GUI/lvgl/src;../LVGL/GUI/lvgl/examples/porting;../LVGL/GUI_APP;../LVGL/GUI_APP/demos;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;..\LVGL\GUI_APP\generated;..\LVGL\GUI_APP\custom</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -819,6 +819,38 @@
         </Group>
         <Group>
           <GroupName>Application/User/GUI_APP</GroupName>
+          <Files>
+            <File>
+              <FileName>lv_font_montserratMedium_16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_16.c</FilePath>
+            </File>
+            <File>
+              <FileName>events_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\generated\events_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>gui_guider.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\generated\gui_guider.c</FilePath>
+            </File>
+            <File>
+              <FileName>setup_scr_screen.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\generated\setup_scr_screen.c</FilePath>
+            </File>
+            <File>
+              <FileName>widgets_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\generated\widgets_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>custom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\GUI_APP\custom\custom.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Application/User/GUI_APP/Demo</GroupName>

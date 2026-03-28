@@ -4,17 +4,14 @@
 
 2026.3.21.19
 
-**ADC_DMA_TIM**
+**ADC_DMA_TIM** 参考：  [STM32HAL ADC+TIM+DMA采集交流信号 基于cubemx_tim+adc+dma-CSDN博客](https://blog.csdn.net/qq_34022877/article/details/121941236)
 
- 相关配置与代码：![image-20260321195046881](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195046881.png)
+3.28：
 
-![image-20260321195114656](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195114656.png)
+使用可视化工具进行设计LVGL的界面，再把界面工程移植回STM32    
 
-![image-20260321195124231](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195124231.png)
+工具：1.[GUI Guider | NXP 半导体](https://www.nxp.com.cn/design/design-center/software/development-software/gui-guider:GUI-GUIDER) 
 
-![image-20260321195146390](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195146390.png)
+2. [最新发布 | anyui](https://anyui.tech/zh/release/release-latest.html)
 
-![image-20260321195157709](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195157709.png)![image-20260321195215834](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195215834.png)
-
-![image-20260321195205412](C:\Users\ASUS\Desktop\杂\Typora图片\image-20260321195205412.png)
-
+推荐用第一个，资料多点

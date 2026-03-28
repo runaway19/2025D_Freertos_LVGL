@@ -3,6 +3,8 @@
 uint16_t adc_buffer[ADC_BUFFER_SIZE]; 
 __IO uint8_t AdcConvEnd = 0;
 
+
+
 void init_board()
 {
   HAL_TIM_Base_Start_IT(&htim3); // 启动定时器和定时器中 1Hz

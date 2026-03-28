@@ -45,6 +45,9 @@
 #include "my_fun.h"
 #include "my_board.h"
 #include "my_lvgl.h"
+#include "../generated/gui_guider.h"
+#include "../generated/events_init.h"
+#include "custom.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
