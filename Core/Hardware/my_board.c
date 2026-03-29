@@ -1,5 +1,7 @@
 #include "my_board.h"
 
+//放置初始化文件
+
 uint16_t adc_buffer[ADC_BUFFER_SIZE]; 
 __IO uint8_t AdcConvEnd = 0;
 

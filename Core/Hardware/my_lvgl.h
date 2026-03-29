@@ -13,6 +13,8 @@
 #include "../generated/events_init.h"
 #include "custom.h"
 
+extern lv_ui guider_ui;
+
 void init_lvgl(void);
 
 #endif

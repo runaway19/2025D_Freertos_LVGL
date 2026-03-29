@@ -46,6 +46,7 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 extern uint16_t adc_buffer[];
+extern uint8_t start_mode;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -259,6 +260,9 @@ void key_change_mode(void const * argument)
   for(;;)
   {
 		
+
+		
+		USART1_Printf("Mode:%d\n",start_mode);
 		/*
 			USART1_Printf("is_SHORT:%d\n",detect_short());
 			for (int i = 0; i < 8; i++) 
