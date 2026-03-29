@@ -1,5 +1,7 @@
 #include "my_fun.h"
 
+//放置一些函数
+
 //  TX 端
 GPIO_TypeDef* TX_PORTS[] = {GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE, GPIOE};
 uint16_t TX_PINS[] = {TX_1_Pin, TX_2_Pin, TX_3_Pin, TX_4_Pin, TX_5_Pin, TX_6_Pin, TX_7_Pin, TX_8_Pin};
