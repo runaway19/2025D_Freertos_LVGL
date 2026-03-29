@@ -15,3 +15,13 @@
 2. [最新发布 | anyui](https://anyui.tech/zh/release/release-latest.html)
 
 推荐用第一个，资料多点
+
+
+
+3.29：
+
+LVGL界面基本设置完成，与32通信基本完善。
+
+DDS还没加进去。试了一下电阻分压测电阻值，不太准。
+
+衰减，线长还没试。
