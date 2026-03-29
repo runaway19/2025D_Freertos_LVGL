@@ -25,11 +25,8 @@ void init_lvgl()
 		events_init(&guider_ui);//GUI事件初始化
 	
 		lv_label_set_text(guider_ui.Mode_One_label_2, "123.45 Ohm");
-    
-    // 如果你想显示变量的值（类似 printf）
     float resistance = 100.5;
     lv_label_set_text_fmt(guider_ui.Mode_One_label_2, "Value: %.1f", resistance);
-	
 }
 
 
