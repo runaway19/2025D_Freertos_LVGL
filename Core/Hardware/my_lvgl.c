@@ -1,5 +1,7 @@
 #include "my_lvgl.h"
 
+uint8_t start_mode = 0;
+
 lv_ui guider_ui;//GUI结构体定义
 
 void init_lvgl()
@@ -21,4 +23,5 @@ void init_lvgl()
 		events_init(&guider_ui);//GUI事件初始化
 	
 }
+
 

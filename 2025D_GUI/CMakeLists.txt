@@ -1,26 +1,11 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
-cmake_minimum_required(VERSION 3.12.4)
+cmake_minimum_required(VERSION 3.20.0)
 
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(gui_guider)
-add_compile_options(-O2)
 
-FILE(GLOB_RECURSE SOURCES ./custom/*.c ./generated/*.c ports/linux/mouse_cursor_icon.c ports/linux/main.c ports/linux/nxp_gg_utils.c)
-
-find_package(PkgConfig)
-pkg_check_modules(PKG_WAYLAND wayland-client wayland-cursor wayland-protocols xkbcommon)
-pkg_check_modules(PKG_LIBDRM REQUIRED libdrm)
-
-add_executable (gui_guider ${SOURCES})
-target_link_libraries (gui_guider PUBLIC lvgl lv_drivers ${PKG_WAYLAND_LIBRARIES} ${PKG_LIBDRM_LIBRARIES})
-target_include_directories(gui_guider PRIVATE generated custom generated/guider_customer_fonts generated/guider_fonts generated/images)
-
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/gui_guider DESTINATION bin)
-
-if(EXISTS ${CMAKE_SOURCE_DIR}/lvgl AND EXISTS ${CMAKE_SOURCE_DIR}/ports/linux/lv_drivers)
-add_subdirectory(lvgl)
-target_include_directories(lvgl PRIVATE ports/linux)
-add_subdirectory(ports/linux/lv_drivers ${CMAKE_CURRENT_BINARY_DIR}/lv_drivers)
-target_include_directories(gui_guider PRIVATE lvgl/src lvgl/src/font ports/linux/lv_drivers)
-endif()
-
+FILE(GLOB_RECURSE app_sources src/main.c src/generated/*.c src/custom/*.c)
+target_include_directories(app PRIVATE src/generated src/custom src/generated/guider_customer_fonts src/generated/guider_fonts src/generated/images)
+target_sources(app PRIVATE ${app_sources})
+target_compile_definitions(app PRIVATE LV_LVGL_H_INCLUDE_SIMPLE)

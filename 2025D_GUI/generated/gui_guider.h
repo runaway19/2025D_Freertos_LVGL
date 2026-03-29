@@ -18,12 +18,30 @@ extern "C" {
 typedef struct
 {
   
-	lv_obj_t *screen;
-	bool screen_del;
-	lv_obj_t *screen_btn_1;
-	lv_obj_t *screen_btn_1_label;
-	lv_obj_t *screen_Change_Button;
-	lv_obj_t *screen_Change_Button_label;
+	lv_obj_t *Mode_One;
+	bool Mode_One_del;
+	lv_obj_t *Mode_One_Change_Button;
+	lv_obj_t *Mode_One_Change_Button_label;
+	lv_obj_t *Mode_One_name_1;
+	lv_obj_t *Mode_One_Test_Type;
+	lv_obj_t *Mode_One_Test_R;
+	lv_obj_t *Mode_One_Test_Db;
+	lv_obj_t *Mode_One_label_3;
+	lv_obj_t *Mode_One_label_2;
+	lv_obj_t *Mode_One_label_1;
+	lv_obj_t *Mode_One_Start_One;
+	lv_obj_t *Mode_One_Start_One_label;
+	lv_obj_t *Mode_Two;
+	bool Mode_Two_del;
+	lv_obj_t *Mode_Two_Mode_two;
+	lv_obj_t *Mode_Two_Change_Button;
+	lv_obj_t *Mode_Two_Change_Button_label;
+	lv_obj_t *Mode_Two_Start_Two;
+	lv_obj_t *Mode_Two_Start_Two_label;
+	lv_obj_t *Mode_Two_Test_Line;
+	lv_obj_t *Mode_Two_Test_Short;
+	lv_obj_t *Mode_Two_label_1;
+	lv_obj_t *Mode_Two_label_2;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -47,9 +65,14 @@ void init_keyboard(lv_ui *ui);
 extern lv_ui guider_ui;
 
 
-void setup_scr_screen(lv_ui *ui);
+void setup_scr_Mode_One(lv_ui *ui);
+void setup_scr_Mode_Two(lv_ui *ui);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
+LV_FONT_DECLARE(lv_font_montserratMedium_20)
+LV_FONT_DECLARE(lv_font_montserratMedium_26)
+LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_22)
+LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_26)
 
 
 #ifdef __cplusplus

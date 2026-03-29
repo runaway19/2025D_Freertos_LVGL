@@ -14,6 +14,6 @@
 #include "custom.h"
 
 void init_lvgl(void);
-	
+
 #endif
 
