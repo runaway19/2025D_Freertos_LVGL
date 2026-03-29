@@ -65,10 +65,10 @@ osSemaphoreId SPI1_Send_OK; // 定义信号量，用于SPI1发完成标志位
 uint8_t CTP_INT_Flag;       // 触摸屏中断标志位
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
-osThreadId BlinkLED2Handle;
 osThreadId LVGL_TaskHandleHandle;
-osThreadId FT6336_ScanTaskHandle;
-osThreadId key_changemodeHandle;
+osThreadId LCD_ScanTaskHandle;
+osThreadId CHANGE_LVGLHandle;
+osMutexId lvgl_mutexHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -76,10 +76,9 @@ osThreadId key_changemodeHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void BlinkLED2_Task(void const * argument);
 void LVGL_TaskHandler_Task(void const * argument);
-void FT6336_Scan_Task(void const * argument);
-void key_change_mode(void const * argument);
+void LCD_Scan_Task(void const * argument);
+void CHANGE_LVGL_TASK(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -108,6 +107,10 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
+  /* Create the mutex(es) */
+  /* definition and creation of lvgl_mutex */
+  osMutexDef(lvgl_mutex);
+  lvgl_mutexHandle = osMutexCreate(osMutex(lvgl_mutex));
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
@@ -133,21 +136,17 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of BlinkLED2 */
-  osThreadDef(BlinkLED2, BlinkLED2_Task, osPriorityBelowNormal, 0, 128);
-  BlinkLED2Handle = osThreadCreate(osThread(BlinkLED2), NULL);
-
   /* definition and creation of LVGL_TaskHandle */
   osThreadDef(LVGL_TaskHandle, LVGL_TaskHandler_Task, osPriorityNormal, 0, 2304);
   LVGL_TaskHandleHandle = osThreadCreate(osThread(LVGL_TaskHandle), NULL);
 
-  /* definition and creation of FT6336_ScanTask */
-  osThreadDef(FT6336_ScanTask, FT6336_Scan_Task, osPriorityAboveNormal, 0, 128);
-  FT6336_ScanTaskHandle = osThreadCreate(osThread(FT6336_ScanTask), NULL);
+  /* definition and creation of LCD_ScanTask */
+  osThreadDef(LCD_ScanTask, LCD_Scan_Task, osPriorityAboveNormal, 0, 128);
+  LCD_ScanTaskHandle = osThreadCreate(osThread(LCD_ScanTask), NULL);
 
-  /* definition and creation of key_changemode */
-  osThreadDef(key_changemode, key_change_mode, osPriorityIdle, 0, 128);
-  key_changemodeHandle = osThreadCreate(osThread(key_changemode), NULL);
+  /* definition and creation of CHANGE_LVGL */
+  osThreadDef(CHANGE_LVGL, CHANGE_LVGL_TASK, osPriorityHigh, 0, 1024);
+  CHANGE_LVGLHandle = osThreadCreate(osThread(CHANGE_LVGL), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -174,27 +173,6 @@ void StartDefaultTask(void const * argument)
   /* USER CODE END StartDefaultTask */
 }
 
-/* USER CODE BEGIN Header_BlinkLED2_Task */
-/**
- * @brief BlinkLED2线程，用于LED2闪烁.
- * @param argument: Not used
- * @note LED2闪烁
- * @retval None
- */
-/* USER CODE END Header_BlinkLED2_Task */
-void BlinkLED2_Task(void const * argument)
-{
-  /* USER CODE BEGIN BlinkLED2_Task */
-  USART1_Printf("%d : Run BlinkLED2_Task\r\n", osKernelSysTick());
-  /* Infinite loop */
-  for (;;)
-  {
-    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin); // LED2电平翻转
-    osDelay(500);
-  }
-  /* USER CODE END BlinkLED2_Task */
-}
-
 /* USER CODE BEGIN Header_LVGL_TaskHandler_Task */
 /**
  * @brief Function implementing the LVGL_TaskHandle thread.
@@ -206,85 +184,70 @@ void LVGL_TaskHandler_Task(void const * argument)
 {
   /* USER CODE BEGIN LVGL_TaskHandler_Task */
 
-	//LVGL初始化
+	//LVGL初始
 	init_lvgl();
 	
   /* Infinite loop */
   for (;;)
   {
-    lv_task_handler(); // LVGL任务处理
+		//添加互斥
+		if (osMutexWait(lvgl_mutexHandle, osWaitForever) == osOK) 
+    {
+      lv_task_handler(); 
+      osMutexRelease(lvgl_mutexHandle); 
+    }
     osDelay(5);        // 延时5ms
   }
   /* USER CODE END LVGL_TaskHandler_Task */
 }
 
-/* USER CODE BEGIN Header_FT6336_Scan_Task */
+/* USER CODE BEGIN Header_LCD_Scan_Task */
 /**
- * @brief Function implementing the FT6336_ScanTask thread.
- * @param argument: Not used
- * @retval None
- */
-/* USER CODE END Header_FT6336_Scan_Task */
-void FT6336_Scan_Task(void const * argument)
+* @brief Function implementing the LCD_ScanTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_LCD_Scan_Task */
+void LCD_Scan_Task(void const * argument)
 {
-  /* USER CODE BEGIN FT6336_Scan_Task */
-  lv_port_indev_init(); // LVGL输入设备初始
+  /* USER CODE BEGIN LCD_Scan_Task */
+	lv_port_indev_init(); // LVGL输入设备初始
   USART1_Printf("%d : lv_port_indev_init() Finish\r\n", osKernelSysTick());
   /* Infinite loop */
-  for (;;)
-  {
-    if (CTP_INT_Flag == 1)
+  for(;;)
+  {    
+		if (CTP_INT_Flag == 1)
     {
       tp_dev.scan(); // 扫描触摸
       CTP_INT_Flag = 0;
     }
     osDelay(10);
   }
-  /* USER CODE END FT6336_Scan_Task */
+  /* USER CODE END LCD_Scan_Task */
 }
 
-/* USER CODE BEGIN Header_key_change_mode */
+/* USER CODE BEGIN Header_CHANGE_LVGL_TASK */
 /**
-* @brief Function implementing the key_changemode thread.
+* @brief Function implementing the CHANGE_LVGL thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_key_change_mode */
-void key_change_mode(void const * argument)
+/* USER CODE END Header_CHANGE_LVGL_TASK */
+void CHANGE_LVGL_TASK(void const * argument)
 {
-  /* USER CODE BEGIN key_change_mode */
-	//按键切换工作模式
+  /* USER CODE BEGIN CHANGE_LVGL_TASK */
   /* Infinite loop */
-
-
   for(;;)
   {
-		
-
-		
-		USART1_Printf("Mode:%d\n",start_mode);
-		/*
-			USART1_Printf("is_SHORT:%d\n",detect_short());
-			for (int i = 0; i < 8; i++) 
-			{
-					for (int j = 0; j < 8; j++) 
-					{
-						if(short_matrix[i][j])
-						{
-							USART1_Printf("GPIO:%d,%d\n", i+1,j+1);
-						}
-					}
-			}
-		*/
-
-		/*
-		uint8_t type = is_SFTP();
-		USART1_Printf("is_SFTP:%d\n",  read_gpio_level(GPIOC, RX_9_Pin));
-		USART1_Printf("is_SFTP:%d\n", type);
-		*/
-    osDelay(20);
+		//添加互斥
+		if (osMutexWait(lvgl_mutexHandle, osWaitForever) == osOK) 
+    {
+        change_label();
+        osMutexRelease(lvgl_mutexHandle);
+    }
+    osDelay(500);
   }
-  /* USER CODE END key_change_mode */
+  /* USER CODE END CHANGE_LVGL_TASK */
 }
 
 /* Private application code --------------------------------------------------*/

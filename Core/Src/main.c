@@ -122,7 +122,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	
-	//初始化函数
+	//初始化函�?
 	init_board();
 	
   /* USER CODE END 2 */

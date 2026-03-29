@@ -12,9 +12,11 @@
 #include "../generated/gui_guider.h"
 #include "../generated/events_init.h"
 #include "custom.h"
+#include "my_fun.h"
 
 extern lv_ui guider_ui;
 
+void change_label(void);
 void init_lvgl(void);
 
 #endif

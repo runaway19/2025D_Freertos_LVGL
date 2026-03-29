@@ -76,7 +76,7 @@ void setup_scr_Mode_One(lv_ui *ui)
     ui->Mode_One_Test_Type = lv_label_create(ui->Mode_One);
     lv_label_set_text(ui->Mode_One_Test_Type, "Label");
     lv_label_set_long_mode(ui->Mode_One_Test_Type, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->Mode_One_Test_Type, 189, 72);
+    lv_obj_set_pos(ui->Mode_One_Test_Type, 189, 71);
     lv_obj_set_size(ui->Mode_One_Test_Type, 100, 32);
 
     //Write style for Mode_One_Test_Type, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -166,7 +166,7 @@ void setup_scr_Mode_One(lv_ui *ui)
 
     //Write codes Mode_One_label_2
     ui->Mode_One_label_2 = lv_label_create(ui->Mode_One);
-    lv_label_set_text(ui->Mode_One_label_2, "阻值");
+    lv_label_set_text(ui->Mode_One_label_2, "R");
     lv_label_set_long_mode(ui->Mode_One_label_2, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->Mode_One_label_2, 51, 150);
     lv_obj_set_size(ui->Mode_One_label_2, 100, 32);

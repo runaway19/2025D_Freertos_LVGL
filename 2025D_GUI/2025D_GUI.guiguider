@@ -1003,7 +1003,7 @@
 					"id": "o87ul8yj",
 					"type": "label",
 					"left": 189,
-					"top": 72,
+					"top": 71,
 					"visible": true,
 					"isLock": false,
 					"flag": [],
@@ -1396,7 +1396,7 @@
 												"scrId": "ukw3tloe",
 												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 												"is_clean": false,
-												"is_del": true
+												"is_del": false
 											}
 										}
 									}
@@ -2248,7 +2248,7 @@
 												"scrId": "emg7n4dm",
 												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 												"is_clean": false,
-												"is_del": true
+												"is_del": false
 											}
 										}
 									}
@@ -2471,7 +2471,7 @@
 													"scrId": "ukw3tloe",
 													"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 													"is_clean": false,
-													"is_del": true
+													"is_del": false
 												}
 											},
 											"dst_type": "scr",
@@ -3296,7 +3296,7 @@
 																					"scrId": "emg7n4dm",
 																					"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 																					"is_clean": false,
-																					"is_del": true
+																					"is_del": false
 																				}
 																			}
 																		}
@@ -3716,7 +3716,7 @@
 						"flag": [],
 						"pos": [
 							189,
-							72
+							71
 						],
 						"size": [
 							100,
@@ -4712,7 +4712,7 @@
 													"scrId": "emg7n4dm",
 													"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 													"is_clean": false,
-													"is_del": true
+													"is_del": false
 												}
 											},
 											"dst_type": "scr",
@@ -5444,7 +5444,7 @@
 														"id": "o87ul8yj",
 														"type": "label",
 														"left": 189,
-														"top": 72,
+														"top": 71,
 														"visible": true,
 														"isLock": false,
 														"flag": [],
@@ -5837,7 +5837,7 @@
 																					"scrId": "ukw3tloe",
 																					"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 																					"is_clean": false,
-																					"is_del": true
+																					"is_del": false
 																				}
 																			}
 																		}

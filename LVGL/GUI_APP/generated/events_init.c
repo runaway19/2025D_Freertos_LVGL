@@ -37,7 +37,7 @@ static void Mode_One_Change_Button_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.Mode_Two, guider_ui.Mode_Two_del, &guider_ui.Mode_One_del, setup_scr_Mode_Two, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.Mode_Two, guider_ui.Mode_Two_del, &guider_ui.Mode_One_del, setup_scr_Mode_Two, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, false);
         break;
     }
     default:
@@ -72,7 +72,7 @@ static void Mode_Two_Change_Button_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.Mode_One, guider_ui.Mode_One_del, &guider_ui.Mode_Two_del, setup_scr_Mode_One, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.Mode_One, guider_ui.Mode_One_del, &guider_ui.Mode_Two_del, setup_scr_Mode_One, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, false);
         break;
     }
     default:
