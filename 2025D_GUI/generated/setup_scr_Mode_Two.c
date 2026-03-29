@@ -100,7 +100,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_label_set_text(ui->Mode_Two_Test_Line, "Label");
     lv_label_set_long_mode(ui->Mode_Two_Test_Line, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->Mode_Two_Test_Line, 184, 154);
-    lv_obj_set_size(ui->Mode_Two_Test_Line, 100, 32);
+    lv_obj_set_size(ui->Mode_Two_Test_Line, 124, 32);
 
     //Write style for Mode_Two_Test_Line, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->Mode_Two_Test_Line, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -123,7 +123,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_label_set_text(ui->Mode_Two_Test_Short, "Label");
     lv_label_set_long_mode(ui->Mode_Two_Test_Short, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->Mode_Two_Test_Short, 184, 73);
-    lv_obj_set_size(ui->Mode_Two_Test_Short, 100, 32);
+    lv_obj_set_size(ui->Mode_Two_Test_Short, 124, 32);
 
     //Write style for Mode_Two_Test_Short, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->Mode_Two_Test_Short, 0, LV_PART_MAIN|LV_STATE_DEFAULT);

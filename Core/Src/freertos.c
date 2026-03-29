@@ -242,7 +242,14 @@ void CHANGE_LVGL_TASK(void const * argument)
 		//添加互斥
 		if (osMutexWait(lvgl_mutexHandle, osWaitForever) == osOK) 
     {
-        change_label();
+				if(start_mode == 1)
+				{
+					change_label_mode_one();
+				}
+				if(start_mode == 2)
+				{
+					change_label_mode_two();
+				}
         osMutexRelease(lvgl_mutexHandle);
     }
     osDelay(500);

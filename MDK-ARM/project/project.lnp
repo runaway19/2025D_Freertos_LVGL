@@ -27,12 +27,12 @@
 "project\lv_font_montserratmedium_28.o"
 "project\lv_font_sourcehanserifsc_regular_22.o"
 "project\lv_font_sourcehanserifsc_regular_26.o"
+"project\custom.o"
 "project\events_init.o"
 "project\gui_guider.o"
 "project\setup_scr_mode_one.o"
 "project\setup_scr_mode_two.o"
 "project\widgets_init.o"
-"project\custom.o"
 "project\lv_demo_widgets.o"
 "project\img_clothes.o"
 "project\img_demo_widgets_avatar.o"
@@ -309,7 +309,7 @@
 "project\cmsis_os.o"
 "project\heap_4.o"
 "project\port.o"
---strict --scatter "project\project.sct"
+--library_type=microlib --strict --scatter "project\project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "project.map" -o project\project.axf

@@ -520,7 +520,7 @@
 
   <Group>
     <GroupName>Application/User/GUI_APP</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -627,8 +627,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\2025D_GUI\generated\events_init.c</PathWithFileName>
-      <FilenameWithoutPath>events_init.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\custom\custom.c</PathWithFileName>
+      <FilenameWithoutPath>custom.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -639,8 +639,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\2025D_GUI\generated\gui_guider.c</PathWithFileName>
-      <FilenameWithoutPath>gui_guider.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\generated\events_init.c</PathWithFileName>
+      <FilenameWithoutPath>events_init.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -651,8 +651,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\2025D_GUI\generated\setup_scr_Mode_One.c</PathWithFileName>
-      <FilenameWithoutPath>setup_scr_Mode_One.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\generated\gui_guider.c</PathWithFileName>
+      <FilenameWithoutPath>gui_guider.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -663,8 +663,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\2025D_GUI\generated\setup_scr_Mode_Two.c</PathWithFileName>
-      <FilenameWithoutPath>setup_scr_Mode_Two.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\generated\setup_scr_mode_one.c</PathWithFileName>
+      <FilenameWithoutPath>setup_scr_mode_one.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -675,8 +675,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\2025D_GUI\generated\widgets_init.c</PathWithFileName>
-      <FilenameWithoutPath>widgets_init.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\generated\setup_scr_Mode_Two.c</PathWithFileName>
+      <FilenameWithoutPath>setup_scr_Mode_Two.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -687,8 +687,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\LVGL\GUI_APP\custom\custom.c</PathWithFileName>
-      <FilenameWithoutPath>custom.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\GUI_APP\generated\widgets_init.c</PathWithFileName>
+      <FilenameWithoutPath>widgets_init.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1764,7 +1764,7 @@
 
   <Group>
     <GroupName>Middlewares/lvgl/example/porting</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1772,7 +1772,7 @@
       <GroupNumber>8</GroupNumber>
       <FileNumber>125</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\LVGL\GUI\lvgl\examples\porting\lv_port_disp.c</PathWithFileName>

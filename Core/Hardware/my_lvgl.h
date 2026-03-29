@@ -13,11 +13,13 @@
 #include "../generated/events_init.h"
 #include "custom.h"
 #include "my_fun.h"
+#include <stdio.h>
 
 extern lv_ui guider_ui;
 
-void change_label(void);
 void init_lvgl(void);
-
+void change_label_mode_one(void);
+void change_label_mode_two(void);
+	
 #endif
 

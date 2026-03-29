@@ -2,8 +2,8 @@
 
 //LVGL初始化 及相关函数
 
+char buf[32];
 uint8_t start_mode = 0;
-
 lv_ui guider_ui;//GUI结构体定义
 
 void init_lvgl()
@@ -22,15 +22,12 @@ void init_lvgl()
 		custom_init(&guider_ui);//变量初始化
 		setup_ui(&guider_ui);//GUI初始化
 		events_init(&guider_ui);//GUI事件初始化
-	
-
-    float resistance = 100.5;
-    lv_label_set_text_fmt(guider_ui.Mode_One_label_2, "Value: %.1f", resistance);
 
 }
-
-void change_label(void)
+//双端模式
+void change_label_mode_one(void)
 {
+		//Type
 		if(is_SFTP())
 		{
 			lv_label_set_text(guider_ui.Mode_One_Test_Type, "SFTP");
@@ -40,6 +37,19 @@ void change_label(void)
 			lv_label_set_text(guider_ui.Mode_One_Test_Type, "UDP");
 		}
 		
+		//R
+		sprintf(buf, "%.1f", 3.0);
+		lv_label_set_text(guider_ui.Mode_One_Test_R, buf);
+		
+		//DB
+		sprintf(buf, "%.1f", 3.0);
+		lv_label_set_text(guider_ui.Mode_One_Test_Db, buf);
+}
+
+
+//单端模式
+void change_label_mode_two(void)
+{
 		if(detect_short())
 		{
 			lv_label_set_text(guider_ui.Mode_Two_Test_Short, "Yes");
@@ -48,4 +58,10 @@ void change_label(void)
 		{
 			lv_label_set_text(guider_ui.Mode_Two_Test_Short, "No");
 		}
+		
+		//Line_Long
+		sprintf(buf, "%.1f", 3.0);
+		lv_label_set_text(guider_ui.Mode_Two_Test_Line, buf);
 }
+
+

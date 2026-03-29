@@ -18,6 +18,11 @@
 #include "stdint.h"
 #include "stdio.h"
 
+// 仅仅声明，不定义（不给它分配空间，就不会重复）
+extern uint8_t start_mode;
+#include "stdint.h"
+#include "stdio.h"
+
 // 这里的宏判断是关键：
 // 如果是在 Windows/MinGW 仿真环境
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
@@ -25,6 +30,11 @@ uint8_t start_mode = 0; // 仿真器自己定义一个，防止链接报错
 #else
 extern uint8_t start_mode; // 真正的 STM32 环境，引用外部变量
 #endif
+#include "stdint.h"
+#include "stdio.h"
+
+// 仅仅声明，不定义（不给它分配空间，就不会重复）
+extern uint8_t start_mode;
 #include "stdint.h"
 #include "stdio.h"
 
@@ -38,6 +48,7 @@ static void Mode_One_Change_Button_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
         ui_load_scr_animation(&guider_ui, &guider_ui.Mode_Two, guider_ui.Mode_Two_del, &guider_ui.Mode_One_del, setup_scr_Mode_Two, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, false);
+        start_mode = 0;
         break;
     }
     default:
@@ -73,6 +84,7 @@ static void Mode_Two_Change_Button_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
         ui_load_scr_animation(&guider_ui, &guider_ui.Mode_One, guider_ui.Mode_One_del, &guider_ui.Mode_Two_del, setup_scr_Mode_One, LV_SCR_LOAD_ANIM_NONE, 20, 20, false, false);
+        start_mode = 0;
         break;
     }
     default:
