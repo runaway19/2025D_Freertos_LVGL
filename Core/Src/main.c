@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /*
  ******************************************************************************
- *    纭欢鎺ョ嚎
+ *    硬件连线
  *    LCD            		F4    
  * ----------------------------------------------------------------------------
  *    GND       ->      GND         
@@ -122,7 +122,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	
-	//鍒濆鍖栧嚱鏁?
+	//初始化
 	init_board();
 	
   /* USER CODE END 2 */
@@ -217,9 +217,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
   /* USER CODE BEGIN Callback 1 */
 	
-	if (htim->Instance == TIM3) // 瀹氭椂鍣═IM3锛屼腑鏂椂 1ms
+	if (htim->Instance == TIM3) //定时器3  1ms
 	{
-			//lv_tick_inc(1); // LVGL鏃跺熀
+			//lv_tick_inc(1); // LVGL tick
 	}
 		
   /* USER CODE END Callback 1 */
