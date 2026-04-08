@@ -5,6 +5,7 @@
 #include <stdio.h> 
 #include <stdarg.h>
 #include "usart.h"
+#include "AD9959.H"
 
 #define ADC_BUFFER_SIZE 1024
 

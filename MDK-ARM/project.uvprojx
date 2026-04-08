@@ -815,6 +815,11 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Hardware\my_lvgl.h</FilePath>
             </File>
+            <File>
+              <FileName>AD9959.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Hardware\AD9959.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

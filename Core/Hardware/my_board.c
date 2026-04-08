@@ -17,4 +17,16 @@ void init_board()
     ;
 	
 	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
+	
+	
+	Init_AD9959();
+	
+	Write_frequence(3,100000);
+	Write_frequence(2,100000);
+
+	Write_Phase(3, 0);
+	Write_Phase(2, 0);
+
+	Write_Amplitude(3, 1023);
+	Write_Amplitude(2, 1023);
 }
