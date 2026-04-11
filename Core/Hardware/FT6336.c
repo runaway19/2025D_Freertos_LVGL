@@ -177,3 +177,4 @@ uint8_t FT6336_Scan(void)
 		t = 10; // 重新从10开始计数
 	return res;
 }
+

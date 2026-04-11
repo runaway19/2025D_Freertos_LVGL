@@ -48,6 +48,7 @@
 #include "../generated/gui_guider.h"
 #include "../generated/events_init.h"
 #include "custom.h"
+#include "extern_flash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -120,6 +121,7 @@ int main(void)
   MX_SPI1_Init();
   MX_ADC1_Init();
   MX_TIM2_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
 	
 	//≥ı ºªØ

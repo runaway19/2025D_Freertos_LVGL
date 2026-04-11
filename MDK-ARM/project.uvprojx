@@ -835,6 +835,16 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Hardware\flash.h</FilePath>
             </File>
+            <File>
+              <FileName>extern_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Hardware\extern_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>extern_flash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Hardware\extern_flash.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

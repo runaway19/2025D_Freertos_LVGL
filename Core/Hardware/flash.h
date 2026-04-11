@@ -9,8 +9,6 @@
 #define ADDR_FLASH_SECTOR_3     ((uint32_t)0x08018000) /* 32 Kbytes */
 #define ADDR_FLASH_SECTOR_4     ((uint32_t)0x08020000) /* 128 Kbytes */
 #define ADDR_FLASH_SECTOR_5     ((uint32_t)0x08040000) /* 256 Kbytes */
-#define ADDR_FLASH_SECTOR_6     ((uint32_t)0x08080000) /* 256 Kbytes */
-#define ADDR_FLASH_SECTOR_7     ((uint32_t)0x080C0000) /* 256 Kbytes */
 
 /*准备写入的测试数据*/
 #define DATA_32                 ((uint32_t)0x87645321)
@@ -18,11 +16,10 @@
 /* Exported types -----------------------------------------------------*/
 /* Exported constants -------------------------------------------------*/
 /* 要擦除内部FLASH的起始地址 */
-#define FLASH_USER_START_ADDR   ADDR_FLASH_SECTOR_7
+#define FLASH_USER_START_ADDR   ADDR_FLASH_SECTOR_5
 /* 要擦除内部FLASH的结束地址 */
-#define FLASH_USER_END_ADDR     ADDR_FLASH_SECTOR_7
+#define FLASH_USER_END_ADDR     ADDR_FLASH_SECTOR_5
 
-static uint32_t GetSector(uint32_t Address);
 int InternalFlash_Test(void);
 
 #endif

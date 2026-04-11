@@ -23,13 +23,9 @@ if ((Address < ADDR_FLASH_SECTOR_1) && (Address >= ADDR_FLASH_SECTOR_0)) {
    } else if ((Address < ADDR_FLASH_SECTOR_4) && (Address >= ADDR_FLASH_SECTOR_3)) {
          sector = FLASH_SECTOR_3;
    } else if ((Address < ADDR_FLASH_SECTOR_5) && (Address >= ADDR_FLASH_SECTOR_4)) {
-      sector = FLASH_SECTOR_4;
-   } else if ((Address < ADDR_FLASH_SECTOR_6) && (Address >= ADDR_FLASH_SECTOR_5)) {
-      sector = FLASH_SECTOR_5;
-   } else if ((Address < ADDR_FLASH_SECTOR_7) && (Address >= ADDR_FLASH_SECTOR_6)) {
-      sector = FLASH_SECTOR_6;
-   } else { /*(Address < FLASH_END_ADDR) && (Address >= ADDR_FLASH_SECTOR_23))*/
-      sector = FLASH_SECTOR_7;
+				 sector = FLASH_SECTOR_4;
+   }  else {
+				 sector = FLASH_SECTOR_5;
    }
    return sector;
 }
@@ -67,7 +63,8 @@ int InternalFlash_Test(void)
    EraseInitStruct.Sector        = FirstSector;
    EraseInitStruct.NbSectors     = NbOfSectors;
    /* 开始擦除操作 */
-   if (HAL_FLASHEx_Erase(&EraseInitStruct, &SECTORError) != HAL_OK) {
+   if (HAL_FLASHEx_Erase(&EraseInitStruct, &SECTORError) != HAL_OK) 
+	{
       /*擦除出错，返回，实际应用中可加入处理 */
       return -1;
    }
@@ -75,10 +72,14 @@ int InternalFlash_Test(void)
    /* 以“字”的大小为单位写入数据 ********************************/
    Address = FLASH_USER_START_ADDR;
 
-   while (Address < FLASH_USER_END_ADDR) {
-      if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, Address, DATA_32) == HAL_OK) {
+   while (Address < FLASH_USER_END_ADDR) 
+	 {
+      if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, Address, DATA_32) == HAL_OK) 
+			{
             Address = Address + 4;
-      } else {
+      } 
+			else 
+			{
             /*写入出错，返回，实际应用中可加入处理 */
             return -1;
       }
@@ -93,18 +94,23 @@ int InternalFlash_Test(void)
    Address = FLASH_USER_START_ADDR;
    MemoryProgramStatus = 0;
 
-   while (Address < FLASH_USER_END_ADDR) {
+   while (Address < FLASH_USER_END_ADDR) 
+	 {
       Data32 = *(__IO uint32_t*)Address;
 
-      if (Data32 != DATA_32) {
+      if (Data32 != DATA_32) 
+			{
             MemoryProgramStatus++;
       }
          Address = Address + 4;
    }
    /* 数据校验不正确 */
-   if (MemoryProgramStatus) {
+   if (MemoryProgramStatus) 
+	 {
          return -1;
-   } else { /*数据校验正确*/
+   } 
+	 else 
+	 { /*数据校验正确*/
          return 0;
    }
 }
