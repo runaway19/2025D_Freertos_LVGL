@@ -18,21 +18,9 @@ void init_board()
 	
 	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
 	
+	AD9834_Init();
+	AD9834_Select_Wave(Sine_Wave);
+	AD9834_Set_Freq(FREQ_0, 100000);
 	
-	Init_AD9959();
-	
-	Write_frequence(0,120);
-	Write_frequence(1,120);
-	Write_frequence(2,120);
-	Write_frequence(3,120);
-	
-	Write_Phase(0, 0);
-	Write_Phase(1, 0);
-	Write_Phase(2, 0);
-	Write_Phase(3, 0);
-	
-	Write_Amplitude(0, 1023);
-	Write_Amplitude(1, 1023);
-	Write_Amplitude(2, 1023);
-	Write_Amplitude(3, 1023);
+
 }
