@@ -6,7 +6,6 @@ uint16_t adc_buffer[ADC_BUFFER_SIZE];
 __IO uint8_t AdcConvEnd = 0;
 
 
-
 void init_board()
 {
   HAL_TIM_Base_Start_IT(&htim3); // 启动定时器和定时器中 1Hz
@@ -20,7 +19,7 @@ void init_board()
 	
 	AD9834_Init();
 	AD9834_Select_Wave(Sine_Wave);
-	AD9834_Set_Freq(FREQ_0, 100000);
+	AD9834_Set_Freq(FREQ_0, 30000000);
 	
 
 }

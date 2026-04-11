@@ -7,6 +7,8 @@
 #include "usart.h"
 #include "AD9959.H"
 #include "AD9834.h" 
+#include "flash.h"
+
 
 #define ADC_BUFFER_SIZE 1024
 

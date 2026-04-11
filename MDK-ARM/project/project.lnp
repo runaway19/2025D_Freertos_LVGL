@@ -21,6 +21,7 @@
 "project\my_lvgl.o"
 "project\ad9959.o"
 "project\ad9834.o"
+"project\flash.o"
 "project\lv_customer_font_sourcehanserifsc_regular_26.o"
 "project\lv_font_montserratmedium_16.o"
 "project\lv_font_montserratmedium_20.o"
