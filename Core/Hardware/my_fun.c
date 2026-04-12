@@ -48,7 +48,7 @@ uint16_t detect_short(void)
         {
             if (i == j) continue; // 跳过自己
 
-            if (read_gpio_level(RX_PORTS[j], RX_PINS[j]) == 1) 
+            if (read_gpio_level(TX_PORTS[j], TX_PINS[j]) == 1) 
             {
 								is_short = 1;
 								short_matrix[i][j] = 1;
@@ -70,7 +70,7 @@ uint8_t is_SFTP(void)
 	
 	osDelay(5);
 	
-	if(read_gpio_level(GPIOC, RX_9_Pin))
+	if(read_gpio_level(GPIOC, RX_9_Pin))  //RX9 -> PC12
 	{
 			result = 1;
 	}

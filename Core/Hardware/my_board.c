@@ -16,8 +16,12 @@ void init_board()
 	
 	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
 	
+	//DDS
+	AD9834_Init();
+	AD9834_Select_Wave(Sine_Wave);
+	AD9834_Set_Freq(FREQ_0, 30000000);
 	
-	extern_flash_test();
+//	extern_flash_test();
 	
 }
 

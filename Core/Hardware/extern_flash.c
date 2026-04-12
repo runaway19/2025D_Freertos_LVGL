@@ -3,15 +3,14 @@
 
 
 SPI_HandleTypeDef SpiHandle;
-
 static __IO uint32_t  SPITimeout = SPIT_LONG_TIMEOUT;   
-
 static uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode);
 
 typedef enum { FAILED = 0, PASSED = !FAILED} TestStatus;
 __IO TestStatus TransferStatus1 = FAILED;
 // 函数原型声明
 TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength);
+
 
 /* 发送缓冲区初始化 */
 uint8_t Tx_Buffer[] = "感谢您选用野火stm32开发板\r\nhttp://firestm32.taobao.com";
@@ -20,6 +19,7 @@ uint8_t Rx_Buffer[BufferSize];
 //读取的ID存储位置
 __IO uint32_t DeviceID = 0;
 __IO uint32_t FlashID = 0;
+
 
 void Delay(__IO uint32_t nCount)
 {

@@ -6,6 +6,7 @@ char buf[32];
 uint8_t start_mode = 0;
 lv_ui guider_ui;//GUI结构体定义
 
+//初始化
 void init_lvgl()
 {
 	  USART1_Printf("%d : Run LVGL_TaskHandler_Task\r\n", osKernelSysTick());
@@ -49,7 +50,7 @@ void change_label_mode_one(void)
 
 //单端模式
 void change_label_mode_two(void)
-{
+{ 
 		if(detect_short())
 		{
 			lv_label_set_text(guider_ui.Mode_Two_Test_Short, "Yes");
