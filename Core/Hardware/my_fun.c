@@ -119,3 +119,19 @@ uint8_t read_gpio_level(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
     }
 }
 
+//微秒延时
+void delay_us(uint32_t us) 
+{
+    uint32_t start_tick = DWT->CYCCNT;
+    uint32_t delay_ticks = us * (SystemCoreClock / 1000000);
+    
+    while ((DWT->CYCCNT - start_tick) < delay_ticks);
+}
+
+// 初始化（必须在调用前执行一次）
+void delay_us_init(void) 
+{
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; 
+    DWT->CYCCNT = 0;
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+}

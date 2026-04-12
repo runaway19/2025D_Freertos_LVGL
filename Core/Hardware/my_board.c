@@ -14,6 +14,9 @@ void init_board()
 	while (!AdcConvEnd)                                   //等待转换完毕
     ;
 	
+	//微秒延时初始化
+	delay_us_init(); 
+
 	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
 	
 	//DDS

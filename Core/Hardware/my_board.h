@@ -9,7 +9,7 @@
 #include "AD9834.h" 
 //#include "flash.h"
 #include "extern_flash.h"
-
+#include "my_fun.h"
 
 #define ADC_BUFFER_SIZE 1024
 

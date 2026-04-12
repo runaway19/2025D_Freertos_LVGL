@@ -22,17 +22,27 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\ASUS\Desktop\2025D\MDK-ARM\project.uvprojx
-Project File Date:  04/11/2026
+Project File Date:  04/12/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil_5.41\ARM\AC5\Bin'
 Build target 'project'
-compiling my_fun.c...
-compiling my_lvgl.c...
-linking...
-Program Size: Code=206752 RO-data=150148 RW-data=836 ZI-data=97228  
-FromELF: creating hex file...
-"project\project.axf" - 0 Error(s), 0 Warning(s).
+compiling AT24C.c...
+..\Core\Hardware\AT24C.c(31): error:  #55-D: too many arguments in invocation of macro "SDA_OUT" 
+  void SDA_OUT(void)
+..\Core\Hardware\AT24C.c(31): error:  #40: expected an identifier
+  void SDA_OUT(void)
+..\Core\Hardware\AT24C.c(31): error:  #65: expected a ";"
+  void SDA_OUT(void)
+..\Core\Hardware\AT24C.c(50): error:  #55-D: too many arguments in invocation of macro "SDA_IN" 
+  void SDA_IN(void)
+..\Core\Hardware\AT24C.c(254): warning:  #12-D: parsing restarts here after previous syntax error
+  	return temp;
+..\Core\Hardware\AT24C.c(255): error:  #169: expected a declaration
+  }
+..\Core\Hardware\AT24C.c(381): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+..\Core\Hardware\AT24C.c: 2 warnings, 5 errors
+"project\project.axf" - 5 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +65,8 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:08
+Target not created.
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
