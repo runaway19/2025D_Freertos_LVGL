@@ -11,8 +11,8 @@ typedef uint16_t u16;
 typedef uint32_t u32;
 
 //IO方向设置
-#define SDA_IN()  {GPIOB->MODER&=~(3<<(6*2));GPIOB->MODER|=0<<6*2;}
-#define SDA_OUT() {GPIOB->MODER&=~(3<<(6*2));GPIOB->MODER|=1<<6*2;}
+#define SDA_IN()  {GPIOB->MODER&=~(3<<(IIC_SDA_PIN_NUM*2));GPIOB->MODER|=0<<IIC_SDA_PIN_NUM*2;}
+#define SDA_OUT() {GPIOB->MODER&=~(3<<(IIC_SDA_PIN_NUM*2));GPIOB->MODER|=1<<IIC_SDA_PIN_NUM*2;}
 
 //IO操作函数	 
 #define IIC_SCL_PORT  GPIOB
@@ -20,17 +20,15 @@ typedef uint32_t u32;
 
 #define IIC_SDA_PORT  GPIOB
 #define IIC_SDA_PIN   GPIO_PIN_11
+#define IIC_SDA_PIN_NUM    2
 
+#define IIC_SCL_H  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_SET)
+#define IIC_SCL_L  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_RESET)
 
-#define IIC_SCL_H  HAL_GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_PIN_SET)
-#define IIC_SCL_L  HAL_GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_PIN_RESET)
+#define IIC_SDA_H  HAL_GPIO_WritePin(IIC_SDA_PORT, IIC_SDA_PIN, GPIO_PIN_SET)
+#define IIC_SDA_L  HAL_GPIO_WritePin(IIC_SDA_PORT, IIC_SDA_PIN, GPIO_PIN_RESET)
 
-#define IIC_SDA_H  HAL_GPIO_WritePin(SDA_PORT, SDA_PIN, GPIO_PIN_SET)
-#define IIC_SDA_L  HAL_GPIO_WritePin(SDA_PORT, SDA_PIN, GPIO_PIN_RESET)
-
-#define IIC_READ_SDA  HAL_GPIO_ReadPin(SDA_PORT, SDA_PIN)
-
-//#define AD_SDA_WRITE(n)  HAL_GPIO_WritePin(SDA_PORT, SDA_PIN, (n) ? GPIO_PIN_SET : GPIO_PIN_RESET)
+#define IIC_READ_SDA  HAL_GPIO_ReadPin(IIC_SDA_PORT, IIC_SDA_PIN)
 
 
 #define AT24C01		127
@@ -54,7 +52,5 @@ void AT24CXX_Write(u16 WriteAddr,u8 *pBuffer,u16 NumToWrite);	//从指定地址开始写
 void AT24CXX_Read(u16 ReadAddr,u8 *pBuffer,u16 NumToRead);   	//从指定地址开始读出指定长度的数据
 
 u8 AT24CXX_Check(void);  //检查器件
-void AT24CXX_Init(void); //初始化IIC
-
 
 #endif

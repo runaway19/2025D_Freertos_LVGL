@@ -24,6 +24,10 @@ void init_board()
 	AD9834_Select_Wave(Sine_Wave);
 	AD9834_Set_Freq(FREQ_0, 30000000);
 	
+	while(AT24CXX_Check())  //检测AT24C02是否正常
+	{
+		delay_us(50000);
+	}
 //	extern_flash_test();
 	
 }

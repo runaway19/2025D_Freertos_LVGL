@@ -10,6 +10,7 @@
 //#include "flash.h"
 #include "extern_flash.h"
 #include "my_fun.h"
+#include "AT24C.h"
 
 #define ADC_BUFFER_SIZE 1024
 

@@ -51,8 +51,8 @@ typedef uint32_t u32;
 
 
 //IO方向设置
-#define SDA_IN()  {GPIOB->MODER&=~(3<<(6*2));GPIOB->MODER|=0<<6*2;}
-#define SDA_OUT() {GPIOB->MODER&=~(3<<(6*2));GPIOB->MODER|=1<<6*2;}
+#define SDA_IN()  {GPIOB->MODER&=~(3<<(SDA_PIN_NUM*2));GPIOB->MODER|=0<<SDA_PIN_NUM*2;}
+#define SDA_OUT() {GPIOB->MODER&=~(3<<(SDA_PIN_NUM*2));GPIOB->MODER|=1<<SDA_PIN_NUM*2;}
 
 //IO操作函数	 
 #define SCL_PORT  GPIOB
@@ -60,6 +60,7 @@ typedef uint32_t u32;
 
 #define SDA_PORT  GPIOB
 #define SDA_PIN   GPIO_PIN_2
+#define SDA_PIN_NUM    2
 
 #define SCL_H  HAL_GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_PIN_SET)
 #define SCL_L  HAL_GPIO_WritePin(SCL_PORT, SCL_PIN, GPIO_PIN_RESET)
