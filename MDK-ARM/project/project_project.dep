@@ -1,6 +1,6 @@
 Dependencies for Project 'project', Target 'project': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\AC5
-F (startup_stm32f407xx.s)(0x69DB6350)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o project\startup_stm32f407xx.o --depend project\startup_stm32f407xx.d)
+F (startup_stm32f407xx.s)(0x69F5623F)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o project\startup_stm32f407xx.o --depend project\startup_stm32f407xx.d)
 F (../Core/Src/main.c)(0x69DB5F2A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\main.o --omf_browse project\main.crf --depend project\main.d)
 I (../Core/Inc/main.h)(0x69BE2820)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x690F1010)
@@ -207,13 +207,13 @@ I (../Core/Hardware/my_fun.h)(0x69DB544E)
 I (../Core/Hardware/my_board.h)(0x69E0D4A2)
 I (../Core/Hardware/AD9959.H)(0x69D6F3FA)
 I (../Core/Hardware/AD9834.h)(0x69D9BD72)
-I (../Core/Hardware/extern_flash.h)(0x69DA42B2)
-I (../Core/Hardware/AT24C.h)(0x69E0D5D3)
+I (../Core/Hardware/extern_flash.h)(0x69F59F0D)
+I (../Core/Hardware/AT24C.h)(0x69F566D1)
 I (../Core/Hardware/my_lvgl.h)(0x69DB596C)
 I (../LVGL/GUI_APP/demos/../generated/gui_guider.h)(0x69C8A522)
 I (../LVGL/GUI_APP/demos/../generated/events_init.h)(0x69C8A522)
 I (../LVGL/GUI_APP/custom/custom.h)(0x69C7D1EE)
-F (../Core/Src/gpio.c)(0x69DB634B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\gpio.o --omf_browse project\gpio.crf --depend project\gpio.d)
+F (../Core/Src/gpio.c)(0x69F56239)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\gpio.o --omf_browse project\gpio.crf --depend project\gpio.d)
 I (../Core/Inc/gpio.h)(0x69BE281C)
 I (../Core/Inc/main.h)(0x69BE2820)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x690F1010)
@@ -454,8 +454,8 @@ I (../LVGL/GUI_APP/custom/custom.h)(0x69C7D1EE)
 I (../Core/Hardware/my_board.h)(0x69E0D4A2)
 I (../Core/Hardware/AD9959.H)(0x69D6F3FA)
 I (../Core/Hardware/AD9834.h)(0x69D9BD72)
-I (../Core/Hardware/extern_flash.h)(0x69DA42B2)
-I (../Core/Hardware/AT24C.h)(0x69E0D5D3)
+I (../Core/Hardware/extern_flash.h)(0x69F59F0D)
+I (../Core/Hardware/AT24C.h)(0x69F566D1)
 I (../Core/Inc/adc.h)(0x69BE6EF1)
 I (../LVGL/GUI_APP/demos/lv_demos.h)(0x69B36187)
 I (../LVGL/GUI_APP/demos/widgets/lv_demo_widgets.h)(0x69B36188)
@@ -1647,7 +1647,7 @@ I (../Core/Inc/usart.h)(0x69BE281F)
 I (D:\keil_5.41\ARM\AC5\include\stdio.h)(0x5E8E3CC2)
 I (D:\keil_5.41\ARM\AC5\include\stdarg.h)(0x5E8E3CC2)
 F (..\Core\Hardware\my_fun.h)(0x69DB544E)()
-F (..\Core\Hardware\my_board.c)(0x69E0D4A2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\my_board.o --omf_browse project\my_board.crf --depend project\my_board.d)
+F (..\Core\Hardware\my_board.c)(0x69F59C7A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\my_board.o --omf_browse project\my_board.crf --depend project\my_board.d)
 I (..\Core\Hardware\my_board.h)(0x69E0D4A2)
 I (../Core/Inc/main.h)(0x69BE2820)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x690F1010)
@@ -1692,7 +1692,7 @@ I (D:\keil_5.41\ARM\AC5\include\stdarg.h)(0x5E8E3CC2)
 I (../Core/Inc/usart.h)(0x69BE281F)
 I (..\Core\Hardware\AD9959.H)(0x69D6F3FA)
 I (..\Core\Hardware\AD9834.h)(0x69D9BD72)
-I (..\Core\Hardware\extern_flash.h)(0x69DA42B2)
+I (..\Core\Hardware\extern_flash.h)(0x69F59F0D)
 I (..\Core\Hardware\my_fun.h)(0x69DB544E)
 I (../Core/Inc/gpio.h)(0x69BE281C)
 I (../Core/Inc/tim.h)(0x69BE6EF2)
@@ -1710,7 +1710,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x690F0FAB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x690F0FAB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x690F0FAB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x690F0FAB)
-I (..\Core\Hardware\AT24C.h)(0x69E0D5D3)
+I (..\Core\Hardware\AT24C.h)(0x69F566D1)
 F (..\Core\Hardware\my_board.h)(0x69E0D4A2)()
 F (..\Core\Hardware\my_lvgl.c)(0x69DB596C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\my_lvgl.o --omf_browse project\my_lvgl.crf --depend project\my_lvgl.d)
 I (..\Core\Hardware\my_lvgl.h)(0x69DB596C)
@@ -2033,7 +2033,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x690F1010)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x690F1010)
 F (..\Core\Hardware\flash.h)(0x69DA16F6)()
 F (..\Core\Hardware\extern_flash.c)(0x69DA443D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\extern_flash.o --omf_browse project\extern_flash.crf --depend project\extern_flash.d)
-I (..\Core\Hardware\extern_flash.h)(0x69DA42B2)
+I (..\Core\Hardware\extern_flash.h)(0x69F59F0D)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x690F1012)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x690F1011)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x690F1012)
@@ -2075,7 +2075,7 @@ I (D:\keil_5.41\ARM\AC5\include\stdio.h)(0x5E8E3CC2)
 I (../Core/Inc/usart.h)(0x69BE281F)
 I (../Core/Inc/main.h)(0x69BE2820)
 I (D:\keil_5.41\ARM\AC5\include\stdarg.h)(0x5E8E3CC2)
-F (..\Core\Hardware\extern_flash.h)(0x69DA42B2)()
+F (..\Core\Hardware\extern_flash.h)(0x69F59F0D)()
 F (..\Core\Hardware\AD5933.c)(0x69DB59D8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\ad5933.o --omf_browse project\ad5933.crf --depend project\ad5933.d)
 I (..\Core\Hardware\AD5933.h)(0x69E0D0FE)
 I (../Core/Inc/main.h)(0x69BE2820)
@@ -2139,7 +2139,7 @@ I (../Core/Inc/usart.h)(0x69BE281F)
 I (D:\keil_5.41\ARM\AC5\include\stdarg.h)(0x5E8E3CC2)
 F (..\Core\Hardware\AD5933.h)(0x69E0D0FE)()
 F (..\Core\Hardware\AT24C.c)(0x69E0D4A2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\at24c.o --omf_browse project\at24c.crf --depend project\at24c.d)
-I (..\Core\Hardware\AT24C.h)(0x69E0D5D3)
+I (..\Core\Hardware\AT24C.h)(0x69F566D1)
 I (../Core/Inc/main.h)(0x69BE2820)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x690F1010)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69BE6EF3)
@@ -2198,7 +2198,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x690F0FAB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x690F0FAB)
 I (../Core/Inc/usart.h)(0x69BE281F)
 I (D:\keil_5.41\ARM\AC5\include\stdarg.h)(0x5E8E3CC2)
-F (..\Core\Hardware\AT24C.h)(0x69E0D5D3)()
+F (..\Core\Hardware\AT24C.h)(0x69F566D1)()
 F (..\LVGL\GUI_APP\generated\guider_customer_fonts\lv_customer_font_SourceHanSerifSC_Regular_26.c)(0x69C8824E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections --enum_is_int -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Core/Hardware -I ../LVGL/GUI -I ../LVGL/GUI/lvgl -I ../LVGL/GUI/lvgl/src -I ../LVGL/GUI/lvgl/examples/porting -I ../LVGL/GUI_APP -I ../LVGL/GUI_APP/demos -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../LVGL/GUI_APP/custom -I ../LVGL/GUI_APP/generated-I.\RTE\_project-ID:\keil_5.41\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o project\lv_customer_font_sourcehanserifsc_regular_26.o --omf_browse project\lv_customer_font_sourcehanserifsc_regular_26.crf --depend project\lv_customer_font_sourcehanserifsc_regular_26.d)
 I (../LVGL/GUI/lvgl/lvgl.h)(0x69B36185)
 I (../LVGL/GUI/lvgl/src/misc/lv_log.h)(0x69B36187)

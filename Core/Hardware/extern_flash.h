@@ -40,31 +40,31 @@
 /*命令定义-结尾*******************************/
 
  //SPI号及时钟初始化函数
-#define SPIx                             SPI1
-#define SPIx_CLK_ENABLE()                __HAL_RCC_SPI1_CLK_ENABLE()
+#define SPIx                             SPI2
+#define SPIx_CLK_ENABLE()                __HAL_RCC_SPI2_CLK_ENABLE()
 #define SPIx_SCK_GPIO_CLK_ENABLE()       __HAL_RCC_GPIOB_CLK_ENABLE()
 #define SPIx_MISO_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOB_CLK_ENABLE() 
 #define SPIx_MOSI_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOB_CLK_ENABLE() 
-#define SPIx_CS_GPIO_CLK_ENABLE()        __HAL_RCC_GPIOG_CLK_ENABLE() 
+#define SPIx_CS_GPIO_CLK_ENABLE()        __HAL_RCC_GPIOB_CLK_ENABLE() 
 
-#define SPIx_FORCE_RESET()               __HAL_RCC_SPI1_FORCE_RESET()
-#define SPIx_RELEASE_RESET()             __HAL_RCC_SPI1_RELEASE_RESET()
+#define SPIx_FORCE_RESET()               __HAL_RCC_SPI2_FORCE_RESET()
+#define SPIx_RELEASE_RESET()             __HAL_RCC_SPI2_RELEASE_RESET()
 
 //SCK引脚
-#define SPIx_SCK_PIN                     GPIO_PIN_3
+#define SPIx_SCK_PIN                     GPIO_PIN_13
 #define SPIx_SCK_GPIO_PORT               GPIOB
-#define SPIx_SCK_AF                      GPIO_AF5_SPI1
+#define SPIx_SCK_AF                      GPIO_AF5_SPI2
 //MISO引脚
-#define SPIx_MISO_PIN                    GPIO_PIN_4
+#define SPIx_MISO_PIN                    GPIO_PIN_14
 #define SPIx_MISO_GPIO_PORT              GPIOB
-#define SPIx_MISO_AF                     GPIO_AF5_SPI1
+#define SPIx_MISO_AF                     GPIO_AF5_SPI2
 //MOSI引脚
-#define SPIx_MOSI_PIN                    GPIO_PIN_5
+#define SPIx_MOSI_PIN                    GPIO_PIN_15
 #define SPIx_MOSI_GPIO_PORT              GPIOB
-#define SPIx_MOSI_AF                     GPIO_AF5_SPI1
+#define SPIx_MOSI_AF                     GPIO_AF5_SPI2
 //CS(NSS)引脚
-#define FLASH_CS_PIN                     GPIO_PIN_6               
-#define FLASH_CS_GPIO_PORT               GPIOG                     
+#define FLASH_CS_PIN                     GPIO_PIN_12               
+#define FLASH_CS_GPIO_PORT               GPIOB                    
 //设置为高电平	
 #define	digitalHi(p,i)			    {p->BSRR=i;}		
 //输出低电平

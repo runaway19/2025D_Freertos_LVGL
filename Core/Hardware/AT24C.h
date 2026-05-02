@@ -20,7 +20,7 @@ typedef uint32_t u32;
 
 #define IIC_SDA_PORT  GPIOB
 #define IIC_SDA_PIN   GPIO_PIN_11
-#define IIC_SDA_PIN_NUM    2
+#define IIC_SDA_PIN_NUM    11
 
 #define IIC_SCL_H  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_SET)
 #define IIC_SCL_L  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_RESET)
@@ -42,7 +42,7 @@ typedef uint32_t u32;
 #define AT24C256	32767  
 
 //开发板使用的是24c02，所以定义EE_TYPE为AT24C02
-#define EE_TYPE AT24C02
+#define EE_TYPE AT24C08
 
 u8 AT24CXX_ReadOneByte(u16 ReadAddr);							//指定地址读取一个字节
 void AT24CXX_WriteOneByte(u16 WriteAddr,u8 DataToWrite);		//指定地址写入一个字节

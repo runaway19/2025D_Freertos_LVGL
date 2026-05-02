@@ -158,7 +158,7 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>0x080C0000</ItemText>
+          <ItemText>DeviceID</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>
