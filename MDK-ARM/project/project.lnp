@@ -25,15 +25,8 @@
 "project\extern_flash.o"
 "project\ad5933.o"
 "project\at24c.o"
-"project\lv_customer_font_sourcehanserifsc_regular_26.o"
-"project\lv_font_montserratmedium_16.o"
-"project\lv_font_montserratmedium_20.o"
-"project\lv_font_montserratmedium_22.o"
-"project\lv_font_montserratmedium_26.o"
-"project\lv_font_montserratmedium_28.o"
-"project\lv_font_sourcehanserifsc_regular_22.o"
-"project\lv_font_sourcehanserifsc_regular_26.o"
 "project\custom.o"
+"project\lv_font_montserratmedium_20.o"
 "project\events_init.o"
 "project\gui_guider.o"
 "project\setup_scr_mode_one.o"
@@ -318,4 +311,4 @@
 --library_type=microlib --strict --scatter "project\project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list "project.map" -o project\project.axf
+--list "..\Listings\project.map" -o project\project.axf

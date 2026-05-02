@@ -19,20 +19,19 @@ void init_board()
 
 	USART1_Printf("%.3f\n", adc_buffer[0] * 3.3 / 4095);
 	
-	//DDS
+	//初始化DDS
 //	AD9834_Init();
 //	AD9834_Select_Wave(Sine_Wave);
 //	AD9834_Set_Freq(FREQ_0, 30000000);
 	
-//	while(AT24CXX_Check())  //检测AT24C08是否正常
-//	{
-//		delay_us(50000);
-//	}
+	extern_flash_test();  //验证W25Q64
+	delay_us(2000);
 	
-
-
-	extern_flash_test();
-//		USART1_Printf("successful\n");
+	while(AT24CXX_Check());  //检测AT24C08是否正常
+	
+	extern_flash_test();  //验证W25Q64
+	
+	USART1_Printf("INIT OK!\n");
 }
 
 

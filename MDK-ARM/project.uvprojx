@@ -55,7 +55,7 @@
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath></ListingPath>
+          <ListingPath>..\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -871,74 +871,69 @@
           <GroupName>Application/User/GUI_APP</GroupName>
           <Files>
             <File>
-              <FileName>lv_customer_font_SourceHanSerifSC_Regular_26.c</FileName>
+              <FileName>custom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_customer_fonts\lv_customer_font_SourceHanSerifSC_Regular_26.c</FilePath>
+              <FilePath>..\2025D_GUI\custom\custom.c</FilePath>
             </File>
             <File>
-              <FileName>lv_font_montserratMedium_16.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_16.c</FilePath>
+              <FileName>custom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\custom\custom.h</FilePath>
+            </File>
+            <File>
+              <FileName>lv_conf_ext.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\custom\lv_conf_ext.h</FilePath>
+            </File>
+            <File>
+              <FileName>guider_customer_fonts.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\generated\guider_customer_fonts\guider_customer_fonts.h</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserratMedium_20.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_20.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_montserratMedium_22.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_22.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_montserratMedium_26.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_26.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_montserratMedium_28.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_montserratMedium_28.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_SourceHanSerifSC_Regular_22.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_SourceHanSerifSC_Regular_22.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_SourceHanSerifSC_Regular_26.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\guider_fonts\lv_font_SourceHanSerifSC_Regular_26.c</FilePath>
-            </File>
-            <File>
-              <FileName>custom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\custom\custom.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\guider_fonts\lv_font_montserratMedium_20.c</FilePath>
             </File>
             <File>
               <FileName>events_init.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\events_init.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\events_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>events_init.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\generated\events_init.h</FilePath>
             </File>
             <File>
               <FileName>gui_guider.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\gui_guider.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\gui_guider.c</FilePath>
             </File>
             <File>
-              <FileName>setup_scr_mode_one.c</FileName>
+              <FileName>gui_guider.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\generated\gui_guider.h</FilePath>
+            </File>
+            <File>
+              <FileName>setup_scr_Mode_One.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\setup_scr_mode_one.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\setup_scr_Mode_One.c</FilePath>
             </File>
             <File>
               <FileName>setup_scr_Mode_Two.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\setup_scr_Mode_Two.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\setup_scr_Mode_Two.c</FilePath>
             </File>
             <File>
               <FileName>widgets_init.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\GUI_APP\generated\widgets_init.c</FilePath>
+              <FilePath>..\2025D_GUI\generated\widgets_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>widgets_init.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\2025D_GUI\generated\widgets_init.h</FilePath>
             </File>
           </Files>
         </Group>

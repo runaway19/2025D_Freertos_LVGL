@@ -68,7 +68,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_obj_set_style_radius(ui->Mode_Two_Change_Button, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->Mode_Two_Change_Button, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->Mode_Two_Change_Button, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->Mode_Two_Change_Button, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->Mode_Two_Change_Button, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->Mode_Two_Change_Button, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->Mode_Two_Change_Button, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
@@ -99,14 +99,14 @@ void setup_scr_Mode_Two(lv_ui *ui)
     ui->Mode_Two_Test_Line = lv_label_create(ui->Mode_Two);
     lv_label_set_text(ui->Mode_Two_Test_Line, "Label");
     lv_label_set_long_mode(ui->Mode_Two_Test_Line, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->Mode_Two_Test_Line, 184, 154);
+    lv_obj_set_pos(ui->Mode_Two_Test_Line, 181, 154);
     lv_obj_set_size(ui->Mode_Two_Test_Line, 124, 32);
 
     //Write style for Mode_Two_Test_Line, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->Mode_Two_Test_Line, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->Mode_Two_Test_Line, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->Mode_Two_Test_Line, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->Mode_Two_Test_Line, &lv_font_montserratMedium_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->Mode_Two_Test_Line, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->Mode_Two_Test_Line, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->Mode_Two_Test_Line, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->Mode_Two_Test_Line, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -129,7 +129,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_obj_set_style_border_width(ui->Mode_Two_Test_Short, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->Mode_Two_Test_Short, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->Mode_Two_Test_Short, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->Mode_Two_Test_Short, &lv_font_montserratMedium_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->Mode_Two_Test_Short, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->Mode_Two_Test_Short, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->Mode_Two_Test_Short, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->Mode_Two_Test_Short, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -143,7 +143,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
 
     //Write codes Mode_Two_label_1
     ui->Mode_Two_label_1 = lv_label_create(ui->Mode_Two);
-    lv_label_set_text(ui->Mode_Two_label_1, "线长");
+    lv_label_set_text(ui->Mode_Two_label_1, "Length");
     lv_label_set_long_mode(ui->Mode_Two_label_1, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->Mode_Two_label_1, 42, 154);
     lv_obj_set_size(ui->Mode_Two_label_1, 114, 32);
@@ -152,7 +152,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_obj_set_style_border_width(ui->Mode_Two_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->Mode_Two_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->Mode_Two_label_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->Mode_Two_label_1, &lv_font_SourceHanSerifSC_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->Mode_Two_label_1, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->Mode_Two_label_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->Mode_Two_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->Mode_Two_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -166,7 +166,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
 
     //Write codes Mode_Two_label_2
     ui->Mode_Two_label_2 = lv_label_create(ui->Mode_Two);
-    lv_label_set_text(ui->Mode_Two_label_2, "是否短路");
+    lv_label_set_text(ui->Mode_Two_label_2, "Short");
     lv_label_set_long_mode(ui->Mode_Two_label_2, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->Mode_Two_label_2, 42, 73);
     lv_obj_set_size(ui->Mode_Two_label_2, 112, 27);
@@ -175,7 +175,7 @@ void setup_scr_Mode_Two(lv_ui *ui)
     lv_obj_set_style_border_width(ui->Mode_Two_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->Mode_Two_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->Mode_Two_label_2, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->Mode_Two_label_2, &lv_font_SourceHanSerifSC_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->Mode_Two_label_2, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->Mode_Two_label_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->Mode_Two_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->Mode_Two_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);

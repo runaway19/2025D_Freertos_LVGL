@@ -1,20 +1,19 @@
 #include "extern_flash.h"
 
-
-
 SPI_HandleTypeDef SpiHandle;
 static __IO uint32_t  SPITimeout = SPIT_LONG_TIMEOUT;   
 static uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode);
 
 typedef enum { FAILED = 0, PASSED = !FAILED} TestStatus;
 __IO TestStatus TransferStatus1 = FAILED;
+
 // 函数原型声明
 TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength);
 
-
 /* 发送缓冲区初始化 */
-uint8_t Tx_Buffer[] = "感谢您选用野火stm32开发板\r\nhttp://firestm32.taobao.com";
+uint8_t Tx_Buffer[] = "stm32flash\r\n\0";
 uint8_t Rx_Buffer[BufferSize];
+//uint8_t Rx_Buffer[64];
 
 //读取的ID存储位置
 __IO uint32_t DeviceID = 0;
@@ -43,7 +42,7 @@ void extern_flash_test(void)
 	/* 检验 SPI Flash ID */
 	if (FlashID == sFLASH_ID) 
 	{	
-		USART1_Printf("\r\n检测到SPI FLASH W25Q128 !\r\n");
+		USART1_Printf("\r\n检测到SPI FLASH W25Q64 !\r\n");
 		
 		/* 擦除将要写入的 SPI FLASH 扇区，FLASH写入前要先擦除 */
 		SPI_FLASH_SectorErase(FLASH_SectorToErase);	 	 
@@ -61,16 +60,16 @@ void extern_flash_test(void)
 		
 		if( PASSED == TransferStatus1 )
 		{    
-			USART1_Printf("\r\n16M串行flash(W25Q128)测试成功!\n\r");
+			USART1_Printf("\r\n8M串行flash(W25Q64)测试成功!\n\r");
 		}
 		else
 		{        
-			USART1_Printf("\r\n16M串行flash(W25Q128)测试失败!\n\r");
+			USART1_Printf("\r\n8M串行flash(W25Q64)测试失败!\n\r");
 		}
 	}// if (FlashID == sFLASH_ID)
 	else
 	{    
-		USART1_Printf("\r\n获取不到 W25Q128 ID!\n\r");
+		USART1_Printf("\r\n获取不到 W25Q64 ID!\n\r");
 	}
 	
 	SPI_Flash_PowerDown(); 

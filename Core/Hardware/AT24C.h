@@ -11,8 +11,16 @@ typedef uint16_t u16;
 typedef uint32_t u32;
 
 //IO方向设置
-#define SDA_IN()  {GPIOB->MODER&=~(3<<(IIC_SDA_PIN_NUM*2));GPIOB->MODER|=0<<IIC_SDA_PIN_NUM*2;}
-#define SDA_OUT() {GPIOB->MODER&=~(3<<(IIC_SDA_PIN_NUM*2));GPIOB->MODER|=1<<IIC_SDA_PIN_NUM*2;}
+//#define SDA_IN() 1
+//#define SDA_OUT() 2
+#define SDA_IN()  { \
+    GPIOB->MODER &= ~(3U << (11 * 2)); \
+    GPIOB->MODER |= (0U << (11 * 2));  \
+}
+#define SDA_OUT() { \
+    GPIOB->MODER &= ~(3U << (11 * 2)); \
+    GPIOB->MODER |= (1U << (11 * 2));  \
+}
 
 //IO操作函数	 
 #define IIC_SCL_PORT  GPIOB
@@ -20,7 +28,7 @@ typedef uint32_t u32;
 
 #define IIC_SDA_PORT  GPIOB
 #define IIC_SDA_PIN   GPIO_PIN_11
-#define IIC_SDA_PIN_NUM    11
+//#define IIC_SDA_PIN_NUM    11
 
 #define IIC_SCL_H  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_SET)
 #define IIC_SCL_L  HAL_GPIO_WritePin(IIC_SCL_PORT, IIC_SCL_PIN, GPIO_PIN_RESET)

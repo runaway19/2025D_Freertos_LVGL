@@ -68,11 +68,7 @@ extern lv_ui guider_ui;
 void setup_scr_Mode_One(lv_ui *ui);
 void setup_scr_Mode_Two(lv_ui *ui);
 
-LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_20)
-LV_FONT_DECLARE(lv_font_montserratMedium_26)
-LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_22)
-LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_26)
 
 
 #ifdef __cplusplus
