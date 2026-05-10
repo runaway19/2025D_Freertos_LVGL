@@ -16,6 +16,10 @@
 
 推荐用第一个，资料多点
 
+gui guider的一点教程：
+
+[【快速入门 LVGL】-- 5、Gui Guider界面移植到STM32工程_gui guider stm32-CSDN博客](https://blog.csdn.net/qq_49053936/article/details/137834282)
+
 
 
 3.29：

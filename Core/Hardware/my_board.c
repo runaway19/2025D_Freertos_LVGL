@@ -24,12 +24,12 @@ void init_board()
 //	AD9834_Select_Wave(Sine_Wave);
 //	AD9834_Set_Freq(FREQ_0, 30000000);
 	
-	extern_flash_test();  //验证W25Q64
-	delay_us(2000);
+//	extern_flash_test();  //验证W25Q64
 	
-	while(AT24CXX_Check());  //检测AT24C08是否正常
-	
-	extern_flash_test();  //验证W25Q64
+	while(AT24CXX_Check())  //检测AT24C08是否正常
+	{
+		delay_us(50000);
+	}
 	
 	USART1_Printf("INIT OK!\n");
 }

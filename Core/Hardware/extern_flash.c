@@ -10,7 +10,7 @@ __IO TestStatus TransferStatus1 = FAILED;
 // 函数原型声明
 TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength);
 
-/* 发送缓冲区初始化 */
+/* 发送缓冲区初始化 */	
 uint8_t Tx_Buffer[] = "stm32flash\r\n\0";
 uint8_t Rx_Buffer[BufferSize];
 //uint8_t Rx_Buffer[64];

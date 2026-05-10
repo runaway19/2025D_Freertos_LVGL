@@ -1436,8 +1436,7 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			],
-			"layerName": "Mode_One"
+			]
 		},
 		{
 			"name": "Mode_Two",
@@ -2400,8 +2399,7 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			],
-			"layerName": "Mode_Two"
+			]
 		}
 	],
 	"Application": {
