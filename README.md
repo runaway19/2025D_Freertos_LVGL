@@ -2,6 +2,14 @@
 
 
 
+在STM32F407上移植好了LVGL图形库，LCD屏幕型号是MSP3526，想换其他屏幕可以自己修改LCD的驱动程序，项目工程为FreeRTOS版。使用SPI+DMA驱动屏幕。
+
+这款LCD屏分辨率为320x480，尺寸为3.5寸，LCD驱动芯片为ST7796，接口为SPI，电容触摸屏驱动芯片为FT6336U，接口为IIC。
+
+MCU超频后全屏刷新时帧率为9FPS左右，局部刷新时帧率为30+FPS。
+
+项目参考了这位大佬：[zeruns/STM32F407_LVGL_Template_MSP3526: 基于STM32F407的LVGL工程模板（3.5寸ST7796触屏LCD），包含FreeRTOS版和裸机版，使用SPI+DMA驱动屏幕。](https://github.com/zeruns/STM32F407_LVGL_Template_MSP3526)
+
 2026.3.21.19
 
 **ADC_DMA_TIM** 参考：  [STM32HAL ADC+TIM+DMA采集交流信号 基于cubemx_tim+adc+dma-CSDN博客](https://blog.csdn.net/qq_34022877/article/details/121941236)
